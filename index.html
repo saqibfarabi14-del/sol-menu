@@ -1,0 +1,2003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>SOL Korean BBQ Dhaka | Fine Dining Korean Restaurant in Gulshan 2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Fraunces:ital,opsz,wght@0,9..144,200;0,9..144,300;1,9..144,200;1,9..144,300&family=Inter:wght@200;300;400&family=Noto+Serif+KR:wght@200;300;400&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Fraunces:ital,opsz,wght@0,9..144,200;0,9..144,300;1,9..144,200;1,9..144,300&family=Inter:wght@200;300;400&family=Noto+Serif+KR:wght@200;300;400&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Fraunces:ital,opsz,wght@0,9..144,200;0,9..144,300;1,9..144,200;1,9..144,300&family=Inter:wght@200;300;400&family=Noto+Serif+KR:wght@200;300;400&display=swap" rel="stylesheet"></noscript>
+<style>
+:root{
+  --ink:#05060b;--inks:#090b12;--inkm:#0d1018;
+  --cream:#f0e6d3;--cd:rgba(240,230,211,.52);--cm:rgba(240,230,211,.3);--cl:rgba(240,230,211,.15);
+  --brass:#b89558;--blt:#d1b077;--bdim:rgba(184,149,88,.2);
+  --ember:#c47762;
+  --ease:cubic-bezier(.16,1,.3,1);--ein:cubic-bezier(.7,0,.84,0);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+.visually-hidden{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+html{background:#05060b;cursor:none;-webkit-font-smoothing:antialiased;scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;font-weight:300;color:var(--cream);overflow-x:hidden}
+
+/* ── GRAIN ── */
+#grain{position:fixed;inset:0;pointer-events:none;z-index:9990;opacity:.025;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size:200px 200px}
+
+/* ── CURSOR ── */
+#cur{position:fixed;width:10px;height:10px;border:1px solid var(--brass);border-radius:50%;background:rgba(240,230,211,.85);pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:difference;transition:width .2s var(--ease),height .2s var(--ease);opacity:0}
+#cur.big{width:36px;height:36px;background:rgba(184,149,88,.2)}
+#cur.sm{width:4px;height:4px}
+
+/* ── PROGRESS ── */
+#prog{position:fixed;top:0;left:0;height:1px;width:0;background:linear-gradient(90deg,var(--brass),var(--blt));z-index:600}
+
+/* ── PRELOADER ── */
+#pre{position:fixed;inset:0;background:#000;z-index:8000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px}
+#pre-ko{font-family:'Noto Serif KR',serif;font-size:64px;font-weight:200;color:var(--brass);opacity:0;animation:koA 1.6s var(--ease) .3s forwards}
+#pre-sol{font-family:'Fraunces',serif;font-size:44px;font-weight:200;color:var(--cream);letter-spacing:.06em;opacity:0;animation:solA 1.2s var(--ease) 1.9s forwards}
+#pre-rule{width:0;height:1px;background:linear-gradient(90deg,transparent,var(--brass),transparent);animation:ruleA 1s var(--ease) 2.7s forwards}
+#pre.out{animation:preO .7s var(--ein) forwards}
+@keyframes koA{0%{opacity:0;transform:translateY(6px)}45%{opacity:1;transform:none}85%{opacity:1}100%{opacity:0;transform:translateY(-5px)}}
+@keyframes solA{from{opacity:0;letter-spacing:.06em}to{opacity:1;letter-spacing:.32em}}
+@keyframes ruleA{from{width:0}to{width:90px}}
+@keyframes preO{to{opacity:0;pointer-events:none}}
+
+#pcv{display:none}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:20px 48px;opacity:0;transform:translateY(-6px);transition:opacity .8s var(--ease),transform .8s var(--ease),background .3s,padding .3s}
+nav.vis{opacity:1;transform:none}
+nav.sc{background:rgba(8,9,13,.93);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);padding-top:13px;padding-bottom:13px;border-bottom:1px solid rgba(184,149,88,.08)}
+.n-logo{display:flex;align-items:center;cursor:none;text-decoration:none}
+.n-logo img{display:block;transition:opacity .3s}
+.n-logo:hover img{opacity:1!important}
+.n-links{display:flex;align-items:center;gap:32px;list-style:none}
+.n-links a{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--cd);text-decoration:none;cursor:none;transition:color .3s;position:relative;padding-bottom:2px}
+.n-links a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:1px;background:var(--brass);transition:width .4s var(--ease)}
+.n-links a:hover{color:var(--cream)}
+.n-links a:hover::after{width:100%}
+.n-cta{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass);border:1px solid rgba(184,149,88,.3);padding:9px 18px;background:transparent;cursor:none;text-decoration:none;position:relative;overflow:hidden;transition:color .3s,border-color .3s}
+.n-cta::before{content:'';position:absolute;inset:0;background:var(--brass);transform:translateX(-100%);transition:transform .5s var(--ease)}
+.n-cta:hover::before{transform:translateX(0)}
+.n-cta:hover{color:var(--ink);border-color:var(--brass)}
+.n-cta span{position:relative;z-index:1}
+
+/* ── HERO ── */
+#hero{position:relative;height:100vh;min-height:620px;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;z-index:2}
+#hero-canvas{position:absolute;top:0;left:0;width:100%;height:100%;display:block;z-index:0}
+.hero-vignette{position:absolute;inset:0;z-index:2;background:radial-gradient(ellipse 70% 65% at 50% 50%,transparent 30%,rgba(5,6,11,.45) 72%,rgba(5,6,11,.85) 100%);pointer-events:none}
+.hc{position:relative;z-index:10;text-align:center;display:flex;flex-direction:column;align-items:center;opacity:0;animation:hcIn 1s var(--ease) 3.9s forwards;padding:0 24px;max-width:700px;width:100%}
+@keyframes hcIn{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.h-eye{font-family:'Noto Serif KR',serif;font-size:clamp(10px,1.1vw,12px);font-weight:200;color:var(--brass);letter-spacing:.2em;margin-bottom:18px;opacity:.75}
+.h-mark{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:clamp(92px,13vw,168px);letter-spacing:.18em;text-indent:.18em;color:var(--cream);line-height:1;text-shadow:0 0 60px rgba(184,149,88,.10)}
+.h-divider{display:flex;align-items:center;gap:18px;margin:20px 0 18px;justify-content:center}
+.h-divider-line{width:44px;height:1px;background:linear-gradient(90deg,transparent,var(--brass));transform:scaleX(0);animation:rIn .8s var(--ease) 4.7s forwards, lineGlow 4s ease-in-out 5.5s infinite}
+.h-divider-line.r{background:linear-gradient(90deg,var(--brass),transparent)}
+@keyframes rIn{to{transform:scaleX(1)}}
+.h-ko{
+  font-family:'Noto Serif KR',serif;
+  font-size:13px;
+  font-weight:200;
+  color:var(--blt);
+  letter-spacing:.22em;
+  opacity:0;
+  animation:rIn .8s var(--ease) 4.7s forwards, koGlow 4s ease-in-out 5.5s infinite;
+  position:relative;
+  display:inline-block;
+}
+@keyframes koGlow{
+  0%{
+    color:rgba(184,149,88,.55);
+    text-shadow:none;
+    opacity:.55;
+  }
+  35%{
+    color:rgba(220,185,110,.95);
+    text-shadow:
+      0 0 8px  rgba(200,165,80,.7),
+      0 0 20px rgba(184,149,88,.45),
+      0 0 40px rgba(184,149,88,.22),
+      0 0 70px rgba(184,149,88,.08);
+    opacity:1;
+  }
+  65%{
+    color:rgba(240,210,140,1);
+    text-shadow:
+      0 0 6px  rgba(220,185,100,.8),
+      0 0 16px rgba(200,165,80,.5),
+      0 0 35px rgba(184,149,88,.28),
+      0 0 60px rgba(184,149,88,.1);
+    opacity:1;
+  }
+  100%{
+    color:rgba(184,149,88,.55);
+    text-shadow:none;
+    opacity:.55;
+  }
+}
+.h-tag{font-family:'Fraunces',serif;font-style:italic;font-weight:200;font-size:clamp(13px,1.4vw,16px);color:var(--cd);margin-top:10px;margin-bottom:32px;max-width:480px;text-align:center}
+.h-cta{font-size:9.5px;letter-spacing:.26em;text-transform:uppercase;color:var(--cream);background:transparent;border:1px solid rgba(184,149,88,.38);padding:14px 38px;cursor:none;position:relative;overflow:hidden;transition:color .3s,border-color .3s;display:inline-block;text-align:center}
+.h-cta::before{content:'';position:absolute;inset:0;background:var(--brass);transform:translateX(-100%);transition:transform .55s var(--ease)}
+.h-cta:hover::before{transform:translateX(0)}
+.h-cta:hover{color:var(--ink);border-color:var(--brass)}
+.h-cta span{position:relative;z-index:1}
+@keyframes fi{from{opacity:0}to{opacity:1}}
+.sc-ind{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);z-index:15;opacity:0;animation:fi .8s var(--ease) 5.1s forwards}
+.sc-line{width:1px;height:38px;background:linear-gradient(to bottom,var(--brass),transparent);position:relative;overflow:hidden;margin:0 auto}
+.sc-dot{width:3px;height:3px;border-radius:50%;background:var(--brass);position:absolute;top:0;left:-1px;animation:df 1.5s ease-in-out infinite}
+@keyframes df{0%{top:0;opacity:1}100%{top:38px;opacity:0}}
+
+/* ══════════════════════════════════════════
+   MENU OVERLAY — tab-based, no scroll
+══════════════════════════════════════════ */
+
+/* ── Menu scroll progress ── */
+.mo-progress{position:absolute;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--brass),var(--blt));width:0%;transition:width .1s linear;z-index:10;pointer-events:none}
+
+#mo{position:fixed;inset:0;z-index:700;background:var(--ink);transform:translateY(100%);transition:transform .75s var(--ease);display:flex;flex-direction:column;overflow:hidden}
+#mo.open{transform:translateY(0)}
+/* entry choreography */
+#mo .mo-hd{opacity:0;transform:translateY(-6px);transition:opacity .45s var(--ease) .1s,transform .45s var(--ease) .1s}
+#mo.open .mo-hd{opacity:1;transform:none}
+#mo .mo-tabs-wrap{opacity:0;transform:translateY(-4px);transition:opacity .45s var(--ease) .2s,transform .45s var(--ease) .2s}
+#mo.open .mo-tabs-wrap{opacity:1;transform:none}
+#mo .mo-panels{opacity:0;transition:opacity .4s var(--ease) .38s}
+#mo.open .mo-panels{opacity:1}
+
+/* header */
+.mo-hd{flex-shrink:0;display:flex;align-items:center;justify-content:space-between;padding:18px 36px;border-bottom:1px solid rgba(184,149,88,.09);background:var(--inks)}
+.mo-hd-l{display:flex;align-items:center;gap:16px}
+.mo-hd-logo img{display:block}
+.mo-hd-title{font-family:'Inter',sans-serif;font-size:8.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--cm);padding-left:16px;border-left:1px solid rgba(184,149,88,.18)}
+.mo-close{font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--cd);background:none;border:1px solid rgba(184,149,88,.18);padding:7px 16px;cursor:none;transition:color .3s,border-color .3s,background .3s}
+.mo-close:hover{color:var(--ink);background:var(--brass);border-color:var(--brass)}
+
+/* tab bar (groups) */
+.mo-tabs-wrap{flex-shrink:0;border-bottom:1px solid rgba(184,149,88,.09);background:var(--inks);overflow-x:auto;-webkit-overflow-scrolling:touch}
+.mo-tabs-wrap::-webkit-scrollbar{height:0}
+.mo-tabs{display:flex;align-items:stretch;padding:0 36px;gap:0;min-width:max-content}
+.mo-tab{font-family:'Fraunces',serif;font-size:13px;font-weight:400;color:rgba(240,230,211,.55);background:none;border:none;border-bottom:2px solid transparent;padding:13px 20px;cursor:none;white-space:nowrap;transition:color .25s,border-color .25s;position:relative}
+.mo-tab:hover{color:var(--cream)}
+.mo-tab.act{color:var(--blt);border-bottom-color:var(--brass)}
+.mo-tab.act::after{content:'';position:absolute;bottom:-2px;left:50%;transform:translateX(-50%);width:4px;height:4px;border-radius:50%;background:var(--brass)}
+
+/* section nav (within group) */
+.mo-body{display:flex;flex:1;overflow:hidden;min-height:0}
+.mo-snav{width:220px;flex-shrink:0;border-right:1px solid rgba(184,149,88,.07);overflow-y:auto;padding:12px 0;background:rgba(8,9,13,.5)}
+.mo-snav::-webkit-scrollbar{width:0}
+.sn-item{display:flex;align-items:baseline;gap:12px;padding:9px 22px;cursor:none;position:relative;transition:background .2s;width:100%;background:none;border:none;text-align:left}
+.sn-item::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:var(--brass);transform:scaleY(0);transform-origin:center;transition:transform .3s var(--ease)}
+.sn-item:hover{background:rgba(184,149,88,.04)}
+.sn-item.act{background:rgba(184,149,88,.06)}
+.sn-item.act::before{transform:scaleY(1)}
+.sn-num{font-family:'Fraunces',serif;font-size:9px;letter-spacing:.15em;color:var(--brass);flex-shrink:0;width:20px;text-align:right}
+.sn-label{font-family:'Fraunces',serif;font-size:14px;font-weight:400;color:rgba(240,230,211,.55);line-height:1.2;transition:color .2s}
+.sn-item:hover .sn-label,.sn-item.act .sn-label{color:var(--cream)}
+.sn-item.act .sn-label{font-style:italic;color:var(--blt)}
+.sn-sub{font-family:'Inter',sans-serif;font-size:8.5px;color:rgba(240,230,211,.18);display:block;margin-top:1px}
+
+/* panels container */
+.mo-panels{flex:1;position:relative;overflow:hidden;min-height:0}
+.mo-panel{position:absolute;inset:0;overflow-y:auto;display:none;padding-bottom:60px}
+.mo-panel.act{display:block}
+.mo-panel::-webkit-scrollbar{width:3px}
+.mo-panel::-webkit-scrollbar-thumb{background:rgba(184,149,88,.18);border-radius:2px}
+
+/* section within panel */
+.msec{padding:40px 44px 8px}
+.msec:last-child{padding-bottom:60px}
+.msec.hidden{display:none}
+
+/* section header */
+.msec-hd{margin-bottom:24px;padding-bottom:16px;border-bottom:1px solid rgba(184,149,88,.1);cursor:default;position:relative}
+.msec-hd-row{display:flex;align-items:flex-end;justify-content:space-between}
+.msec-left{}
+.msec-eye{font-size:8.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--brass);margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.msec-eye::before{content:'';display:inline-block;width:20px;height:1px;background:var(--brass);transition:width .5s var(--ease)}
+.msec-hd:hover .msec-eye::before{width:36px}
+.msec-title{font-family:'Fraunces',serif;font-weight:200;font-size:clamp(26px,3.2vw,40px);color:var(--cream);line-height:1;font-optical-sizing:auto;transition:color .3s}
+.msec-hd:hover .msec-title{color:var(--blt)}
+.msec-ko{font-family:'Noto Serif KR',serif;font-size:10px;font-weight:200;color:var(--brass);letter-spacing:.1em;margin-top:5px}
+.msec-ghost{font-family:'Noto Serif KR',serif;font-size:72px;font-weight:200;color:rgba(184,149,88,0);line-height:1;pointer-events:none;user-select:none;transition:color .4s var(--ease);padding-bottom:0}
+.msec-hd:hover .msec-ghost{color:rgba(184,149,88,.055)}
+.msec-underline{height:1px;background:linear-gradient(90deg,var(--brass),transparent);width:0;margin-top:12px;transition:width .6s var(--ease)}
+.msec-hd:hover .msec-underline{width:100%}
+.msec-sub{font-size:8.5px;letter-spacing:.24em;text-transform:uppercase;color:var(--cm);margin:20px 0 8px;padding-bottom:7px;border-bottom:1px solid rgba(184,149,88,.05)}
+
+/* ── SECTION NAV PREV/NEXT ── */
+.sec-nav{display:flex;align-items:center;justify-content:space-between;padding:14px 44px;border-top:1px solid rgba(184,149,88,.07);flex-shrink:0;background:rgba(8,9,13,.4)}
+.sec-nav-btn{font-size:8.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--cm);background:none;border:none;cursor:none;display:flex;align-items:center;gap:8px;transition:color .25s;padding:6px 0}
+.sec-nav-btn:hover{color:var(--brass)}
+.sec-nav-btn svg{width:14px;height:14px;flex-shrink:0}
+.sec-nav-center{font-family:'Fraunces',serif;font-size:11px;font-style:italic;color:rgba(184,149,88,.4)}
+
+/* ── ITEM CARD ── */
+.mcard{display:flex;justify-content:space-between;align-items:baseline;gap:14px;padding:14px 0;border-bottom:1px solid rgba(184,149,88,.06);cursor:none;position:relative;transition:background .2s}
+.mcard::before{content:'';position:absolute;left:-6px;top:0;bottom:0;width:2px;background:var(--brass);transform:scaleY(0);transition:transform .3s var(--ease)}
+.mcard:hover{background:rgba(184,149,88,.03)}
+.mcard:hover::before{transform:scaleY(1)}
+.mcard:last-child{border-bottom:none}
+.mc-l{flex:1;min-width:0}
+.mc-ko{font-family:'Noto Serif KR',serif;font-size:10px;font-weight:300;color:rgba(240,230,211,.65);letter-spacing:.06em;margin-bottom:3px;transition:color .2s}
+.mc-rom{font-family:'Inter',sans-serif;font-size:9px;font-style:italic;color:rgba(240,230,211,.42);margin-left:6px}
+.mc-name{font-family:'Fraunces',serif;font-style:italic;font-weight:400;font-size:clamp(15px,1.5vw,18px);color:var(--cream);line-height:1.25;margin-bottom:4px;font-optical-sizing:auto;transition:color .2s,transform .25s var(--ease)}
+.mcard:hover .mc-name{color:var(--cream);transform:translateX(4px)}
+.mcard:hover .mc-ko{color:var(--brass)}
+.mc-desc{font-size:clamp(11px,1.1vw,13px);color:var(--cm);line-height:1.78;max-width:520px;font-weight:200}
+.mc-tags{display:flex;gap:4px;flex-wrap:wrap;margin-top:5px}
+
+.mc-tag{font-size:7px;letter-spacing:.16em;text-transform:uppercase;padding:2px 5px;border:1px solid;border-radius:1px}
+.mc-tag.spicy{color:var(--ember);border-color:rgba(196,119,98,.25)}
+.mc-tag.veg{color:#6db36d;border-color:rgba(109,179,109,.22)}
+.mc-tag.sig{color:var(--brass);border-color:rgba(184,149,88,.25)}
+.mc-tag.premium{color:var(--blt);border-color:rgba(209,176,119,.28)}
+.mc-tag.seafood{color:#7ab8c8;border-color:rgba(122,184,200,.22)}
+.mc-r{flex-shrink:0;text-align:right}
+.mc-price{font-family:'Fraunces',serif;font-weight:400;font-size:clamp(14px,1.3vw,17px);color:var(--blt);white-space:nowrap;transition:color .2s}
+.mcard:hover .mc-price{color:#e8c88a;text-shadow:0 0 16px rgba(184,149,88,.3)}
+.mc-pm{font-size:10px;color:var(--brass);display:flex;flex-direction:column;gap:2px;align-items:flex-end}
+.mc-pm>div span:last-child{font-family:'Fraunces',serif;font-size:12px;color:var(--blt)}
+.mc-pl{font-size:8.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--cm);margin-right:4px}
+
+/* ── SIGNATURE ── */
+.sig-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.sig-card{border:1px solid rgba(184,149,88,.14);padding:26px 22px;position:relative;overflow:hidden;cursor:none;transition:border-color .35s}
+.sig-card::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(184,149,88,.055) 0%,transparent 60%);opacity:0;transition:opacity .35s}
+.sig-card:hover{border-color:rgba(184,149,88,.42)}
+.sig-card:hover::after{opacity:1}
+.sig-n{font-family:'Fraunces',serif;font-size:8.5px;letter-spacing:.2em;color:var(--brass);margin-bottom:10px}
+.sig-t{font-family:'Fraunces',serif;font-style:italic;font-weight:200;font-size:22px;color:var(--cream);margin-bottom:7px;font-optical-sizing:auto}
+.sig-d{font-size:11.5px;color:var(--cd);line-height:1.7;margin-bottom:16px;font-weight:200}
+.sig-items{list-style:none;display:flex;flex-direction:column;gap:5px}
+.sig-items li{font-size:11px;color:var(--cm);padding-left:14px;position:relative;line-height:1.5;font-weight:200}
+.sig-items li::before{content:'—';position:absolute;left:0;color:var(--brass);font-size:9px;top:2px}
+.sig-items li strong{font-family:'Noto Serif KR',serif;font-weight:200;margin-right:5px;color:var(--cd)}
+.sig-price{font-family:'Fraunces',serif;font-weight:300;font-size:20px;color:var(--blt);margin-top:18px}
+.sig-pn{font-size:9px;letter-spacing:.09em;color:var(--cm);display:block;margin-top:3px}
+.sig-note{font-size:7.5px;letter-spacing:.16em;text-transform:uppercase;color:rgba(184,149,88,.6);display:block;margin-top:6px;font-family:'Inter',sans-serif;font-weight:300}
+
+/* ── BBQ ── */
+.bbq-tier{margin-bottom:24px}
+.bbq-th{font-size:8.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass);margin-bottom:10px;padding-bottom:7px;border-bottom:1px solid rgba(184,149,88,.07)}
+.bbq-row{display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:1px solid rgba(184,149,88,.05);cursor:none;transition:background .18s}
+.bbq-row:hover{background:rgba(184,149,88,.03);padding-left:8px;padding-right:4px}
+.bbq-row:last-child{border-bottom:none}
+.bbq-row.hi{padding:11px 8px;background:rgba(184,149,88,.04)}
+.bbq-ko{font-family:'Noto Serif KR',serif;font-size:10px;color:var(--cm);margin-bottom:2px;font-weight:200}
+.bbq-en{font-family:'Fraunces',serif;font-style:italic;font-weight:300;font-size:14px;color:var(--cd);transition:color .2s}
+.bbq-row:hover .bbq-en,.bbq-row.hi .bbq-en{color:var(--cream)}
+.bbq-amt{font-family:'Fraunces',serif;font-weight:300;font-size:14px;color:var(--blt);flex-shrink:0}
+.bbq-row.hi .bbq-amt{font-size:16px}
+.assort-g{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}
+.ac{border:1px solid rgba(184,149,88,.12);padding:18px 14px;cursor:none;transition:border-color .35s var(--ease),background .35s var(--ease),transform .35s var(--ease);position:relative;overflow:hidden;background:rgba(184,149,88,.02)}
+.ac::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(184,149,88,.06) 0%,transparent 60%);opacity:0;transition:opacity .4s var(--ease)}
+.ac:hover{border-color:rgba(184,149,88,.45);background:rgba(184,149,88,.05);transform:translateY(-3px)}
+.ac:hover::before{opacity:1}
+.ac:hover{border-color:rgba(184,149,88,.32)}
+.ac.hi{border-color:rgba(184,149,88,.55);background:rgba(184,149,88,.06)}
+.ac.hi::after{content:"CHEF SELECTION";position:absolute;top:10px;right:10px;font-size:6px;letter-spacing:.18em;color:var(--brass);opacity:.75;font-family:'Inter',sans-serif;font-weight:300}
+.ac-name{font-family:'Fraunces',serif;font-style:italic;font-weight:300;font-size:14px;color:var(--cream);margin-bottom:8px}
+.ac-items{font-size:10px;color:var(--cm);line-height:1.9;font-weight:200}
+.ac-price{font-family:'Fraunces',serif;font-size:16px;color:var(--blt);margin-top:10px;display:block}
+
+/* ── BEVERAGES — no background box, line separators only ── */
+.bev-g{display:grid;grid-template-columns:repeat(3,1fr)}
+.bev-c{background:transparent;padding:18px 16px;border-bottom:1px solid rgba(184,149,88,.08);cursor:none;transition:background .2s;position:relative}
+.bev-c:nth-child(3n+2){border-left:1px solid rgba(184,149,88,.08);border-right:1px solid rgba(184,149,88,.08)}
+.bev-c:hover{background:rgba(184,149,88,.03)}
+.bev-name{font-family:'Fraunces',serif;font-style:italic;font-weight:300;font-size:15px;color:var(--cream);margin-bottom:5px}
+.bev-desc{font-size:11px;color:var(--cm);line-height:1.72;font-weight:200;margin-bottom:10px}
+.bev-price{font-family:'Fraunces',serif;font-size:13px;color:var(--blt)}
+
+/* ── DESSERT ── */
+.des-card{border:1px solid rgba(184,149,88,.13);padding:24px;max-width:380px;transition:border-color .3s;cursor:none}
+.des-card:hover{border-color:rgba(184,149,88,.36)}
+
+/* ── STAGGER reveal for items ── */
+.mcard,.sig-card,.bbq-row,.bev-c,.ac,.des-card{
+  opacity:0;transform:translateY(8px);
+  /* Note: transition is applied via JS after visible to avoid conflict with hover */
+}
+.mcard.vis,.sig-card.vis,.bbq-row.vis,.bev-c.vis,.ac.vis,.des-card.vis{opacity:1;transform:none}
+
+/* ══ LANDING PAGE SECTIONS ══ */
+section{position:relative;z-index:2}
+.reveal{opacity:0;transform:translateY(16px);transition:opacity .85s var(--ease),transform .85s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.wr span{display:inline-block;opacity:0;transform:translateY(7px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
+.wr.in span{opacity:1;transform:none}
+
+/* ── PHILOSOPHY ── */
+#philo{background:var(--ink);min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:60px 0}
+.ph-center{max-width:600px;width:100%;margin:0 auto;text-align:center;padding:0 32px}
+.ph-orb-wrap{width:min(300px,62vw);height:min(300px,62vw);margin:0 auto 48px;position:relative;display:block;background:transparent;border-radius:50%;overflow:hidden}
+.ph-orb-cv{width:100%;height:100%;display:block;background:transparent;border-radius:50%}
+@media(max-width:640px){.ph-orb-wrap{width:min(220px,54vw);height:min(220px,54vw);margin-bottom:36px;border-radius:50%;overflow:hidden}}
+.ph-rule-anim{display:none}
+.eyebrow{
+  font-family:'Fraunces',serif;
+  font-weight:200;
+  font-size:clamp(28px,4vw,56px);
+  letter-spacing:.08em;
+  color:transparent;
+  background:linear-gradient(135deg, var(--brass) 0%, var(--blt) 40%, rgba(240,230,211,.7) 60%, var(--brass) 100%);
+  background-size:300% 300%;
+  -webkit-background-clip:text;
+  background-clip:text;
+  line-height:1;
+  display:block;
+  position:relative;
+  cursor:default;
+  transition:letter-spacing .6s var(--ease);
+  font-variation-settings:"opsz" 144;
+  animation:phGold 6s ease infinite;
+}
+.eyebrow::before{
+  content:'';display:block;width:0;height:1px;
+  background:linear-gradient(90deg,var(--brass),transparent);
+  margin-top:14px;
+  transition:width 1.4s var(--ease) .3s;
+}
+.in .eyebrow::before{width:72px}
+.eyebrow:hover{letter-spacing:.14em}
+@keyframes phGold{
+  0%{background-position:0% 50%}
+  50%{background-position:100% 50%}
+  100%{background-position:0% 50%}
+}
+.ph-q{font-family:'Fraunces',serif;font-style:italic;font-weight:200;font-size:clamp(15px,1.6vw,20px);line-height:1.65;color:rgba(240,230,211,.75);font-optical-sizing:auto;margin-top:20px}
+.ph-note{font-size:clamp(11px,1.1vw,13px);color:var(--cm);line-height:1.88;max-width:390px;font-weight:200}
+
+/* ── AMBIANCE ── */
+#amb{position:relative;height:100vh;min-height:620px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+#amb-cv{display:none}
+#amb-vid{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;display:block;filter:grayscale(1) brightness(0.75) contrast(1.1)}
+.amb-vignette{position:absolute;inset:0;z-index:2;background:linear-gradient(to bottom,rgba(5,6,11,.55) 0%,rgba(5,6,11,.25) 35%,rgba(5,6,11,.25) 65%,rgba(5,6,11,.75) 100%);pointer-events:none}
+.amb-c{position:relative;z-index:5;text-align:center;max-width:700px;padding:0 36px}
+.amb-q{font-family:'Fraunces',serif;font-style:italic;font-weight:200;font-size:clamp(22px,3.5vw,44px);color:var(--cream);line-height:1.44;text-shadow:0 0 40px rgba(0,0,0,.9),0 2px 4px rgba(0,0,0,.8);margin-bottom:40px;font-optical-sizing:auto}
+.amb-meta{display:flex;align-items:center;justify-content:center;gap:22px}
+.amb-i{font-size:8.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--cd)}
+.amb-sep{width:1px;height:16px;background:rgba(184,149,88,.26)}
+
+/* ── RESERVE ── */
+#res{background:var(--ink);padding:100px 0 90px;border-top:1px solid rgba(184,149,88,.07)}
+.res-in{max-width:680px;margin:0 auto;padding:0 48px}
+.res-hd{text-align:center;margin-bottom:56px}
+.res-wm{font-family:'Fraunces',serif;font-weight:200;font-size:clamp(56px,8vw,108px);color:var(--cream);letter-spacing:.06em;line-height:1;margin-bottom:8px;font-optical-sizing:auto}
+.res-ko{font-family:'Noto Serif KR',serif;font-size:13px;font-weight:200;color:var(--brass);letter-spacing:.16em}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:0 38px}
+.ff{padding:18px 0;border-bottom:1px solid rgba(184,149,88,.15);position:relative;transition:border-color .3s}
+.ff:focus-within{border-color:var(--brass)}
+.ff:focus-within::after{content:'';position:absolute;bottom:-1px;left:0;width:100%;height:1px;background:var(--brass);box-shadow:0 0 8px rgba(184,149,88,.3)}
+.ff.full{grid-column:1/-1}
+.ff label{display:block;font-size:8px;letter-spacing:.2em;text-transform:uppercase;color:var(--brass);margin-bottom:6px}
+.ff input,.ff textarea,.ff select{width:100%;background:transparent;border:0;outline:0;font-family:'Fraunces',serif;font-weight:300;font-size:16px;color:var(--cream);caret-color:var(--brass);cursor:none}
+.ff input::placeholder,.ff textarea::placeholder{color:rgba(240,230,211,.15)}
+.ff select option{background:var(--inks)}
+.ff textarea{resize:none;height:52px;line-height:1.6}
+.sub-btn{width:100%;padding:16px;background:transparent;border:1px solid rgba(184,149,88,.3);color:var(--cream);font-size:9px;letter-spacing:.26em;text-transform:uppercase;cursor:none;position:relative;overflow:hidden;transition:color .3s,border-color .3s;display:flex;align-items:center;justify-content:center;gap:8px}
+.sub-btn::before{content:'';position:absolute;inset:0;background:rgba(184,149,88,.85);transform:translateX(-100%);transition:transform .55s var(--ease)}
+.sub-btn:hover::before{transform:translateX(0)}
+.res-cta-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:32px;grid-column:1/-1}
+.res-call-btn{display:flex;align-items:center;justify-content:center;gap:8px;padding:16px;background:transparent;border:1px solid rgba(184,149,88,.3);color:var(--brass);font-size:9px;letter-spacing:.26em;text-transform:uppercase;cursor:none;text-decoration:none;position:relative;overflow:hidden;transition:color .3s,border-color .3s}
+.res-call-btn::before{content:'';position:absolute;inset:0;background:var(--brass);transform:translateX(-100%);transition:transform .55s var(--ease)}
+.res-call-btn:hover::before{transform:translateX(0)}
+.res-call-btn:hover{color:var(--ink)!important}
+.res-call-btn:hover,.res-wa-btn:hover{color:var(--ink)}
+@media(max-width:640px){.res-cta-row{grid-template-columns:1fr}}
+.sub-btn:hover{color:var(--ink);border-color:var(--brass)}
+.sub-btn span{position:relative;z-index:1}
+.res-ct{margin-top:36px;text-align:center;font-size:10px;letter-spacing:.11em;color:var(--brass);line-height:2.2}
+
+/* ── FOOTER ── */
+footer{background:#000;border-top:1px solid rgba(184,149,88,.06);padding:64px 48px 44px;position:relative;overflow:hidden}
+.ft-ghost{position:absolute;bottom:-30px;left:50%;transform:translateX(-50%);font-family:'Noto Serif KR',serif;font-size:220px;font-weight:200;color:rgba(184,149,88,.03);pointer-events:none;user-select:none;white-space:nowrap}
+.ft-in{position:relative;z-index:2;text-align:center}
+.ft-logo-wrap{display:flex;justify-content:center;margin-bottom:7px}
+.ft-ko{font-family:'Noto Serif KR',serif;font-size:11px;font-weight:200;color:var(--brass);letter-spacing:.18em;margin-bottom:20px}
+.ft-rule{width:28px;height:1px;background:rgba(184,149,88,.26);margin:0 auto 20px}
+.ft-coords{font-size:8.5px;letter-spacing:.16em;color:rgba(240,230,211,.2);margin-bottom:20px}
+.ft-socials{display:flex;justify-content:center;gap:16px;margin-bottom:20px}
+.ft-socials a{color:var(--cm);cursor:none;transition:color .3s}
+.ft-socials a:hover{color:var(--brass)}
+.ft-socials svg{width:15px;height:15px}
+.ft-nav{display:flex;justify-content:center;gap:22px;margin-bottom:20px}
+.ft-nav a{font-size:8.5px;letter-spacing:.17em;text-transform:uppercase;color:var(--cm);text-decoration:none;cursor:none;transition:color .3s}
+.ft-nav a:hover{color:var(--brass)}
+.ft-copy{font-size:8px;letter-spacing:.1em;color:rgba(240,230,211,.16)}
+.ft-print{margin-top:20px;display:inline-flex;align-items:center;background:none;border:1px solid rgba(184,149,88,.22);padding:8px 18px;font-family:'Inter',sans-serif;font-weight:300;font-size:8.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--brass);cursor:none;opacity:.65;transition:opacity .3s,border-color .3s;position:relative;overflow:hidden}
+.ft-print::before{content:'';position:absolute;inset:0;background:var(--brass);transform:translateX(-100%);transition:transform .5s var(--ease)}
+.ft-print:hover{opacity:1;border-color:var(--brass);color:var(--ink)}
+.ft-print:hover::before{transform:translateX(0)}
+.ft-print span{position:relative;z-index:1}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  nav{padding:14px 20px}
+  .n-links{display:none}
+  .ph-center{padding:0 20px}
+  .mo-snav{width:160px}
+  .msec{padding:28px 18px 6px}
+  .sig-grid{grid-template-columns:1fr}
+  .assort-g{grid-template-columns:1fr 1fr}
+  .bev-g{grid-template-columns:repeat(2,1fr)}
+  .fg{grid-template-columns:1fr}
+  .res-in{padding:0 20px}
+  footer{padding:48px 20px 36px}
+  .mo-tabs{padding:0 16px}
+  .mo-tab{padding:11px 14px;font-size:12px}
+}
+@media(max-width:580px){
+  .mo-snav{display:none}
+  .msec{padding:24px 16px 6px}
+  .bev-g{grid-template-columns:1fr 1fr}
+  .assort-g{grid-template-columns:1fr}
+  .sec-nav{padding:12px 16px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  .reveal,.wr span,.mcard,.sig-card,.bbq-row,.bev-c,.ac,.des-card{opacity:1!important;transform:none!important}
+}
+
+
+
+/* ── THRESHOLD SECTION ── */
+#threshold{padding:clamp(80px,12vw,140px) 48px;text-align:center;overflow:hidden;position:relative}
+#threshold::before{content:'';position:absolute;top:50%;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,rgba(184,149,88,.12),transparent);transform:scaleX(0);transition:transform 1.6s var(--ease)}
+#threshold.in-view::before{transform:scaleX(1)}
+.thr-quote{font-family:'Fraunces',serif;font-style:italic;font-weight:200;font-size:clamp(18px,2.4vw,32px);color:rgba(240,230,211,.75);line-height:1.6;max-width:680px;margin:0 auto 48px;font-optical-sizing:auto;letter-spacing:.02em}
+.thr-quote .word{display:inline-block;opacity:0;transform:translateY(12px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.thr-quote .word.in{opacity:1;transform:none}
+.thr-materials{display:flex;justify-content:center;align-items:center;gap:0;flex-wrap:nowrap;margin-top:16px;width:100%}
+.thr-mat-3d{text-align:center;opacity:0;transform:translateY(10px);transition:opacity 1.2s var(--ease),transform 1.2s var(--ease)}
+.thr-mat-3d.in{opacity:1;transform:translateY(0)}
+.thr-cv{display:block;margin:0 auto;width:72px;height:72px;background:transparent}
+.thr-mat-en{font-size:6.5px;letter-spacing:.28em;text-transform:uppercase;color:rgba(184,149,88,.4);display:block;margin-top:6px;transition:color .6s}
+.thr-mat-3d.in .thr-mat-en{color:rgba(184,149,88,.55)}
+.thr-sep-3d{width:1px;height:36px;background:linear-gradient(to bottom,transparent,rgba(184,149,88,.2),transparent);flex-shrink:0;margin:0 16px}
+@media(max-width:640px){
+  #threshold{padding:60px 20px}
+  .thr-cv{width:60px;height:60px;background:transparent}
+  .thr-sep-3d{width:1px;height:28px;margin:0 10px}
+}
+
+
+/* ── SECTION DIVIDER: hero → philosophy ── */
+.sec-divider{
+  display:flex;align-items:center;justify-content:center;
+  padding:0;margin:0;height:60px;position:relative;
+  overflow:hidden;
+}
+.sec-divider-line{
+  position:absolute;left:0;right:0;top:50%;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(184,149,88,.18) 20%,rgba(184,149,88,.18) 80%,transparent);
+}
+.sec-divider-mark{
+  position:relative;z-index:2;
+  background:var(--ink);
+  padding:0 20px;
+  display:flex;align-items:center;gap:10px;
+}
+.sec-divider-ko{
+  font-family:'Noto Serif KR',serif;
+  font-size:11px;font-weight:200;
+  color:rgba(184,149,88,.30);
+  letter-spacing:.08em;
+}
+.sec-divider-dot{
+  width:3px;height:3px;border-radius:50%;
+  background:rgba(184,149,88,.25);
+}
+
+/* ── DISH MODAL ── */
+#dish-modal{
+  position:fixed;inset:0;z-index:6000;
+  display:flex;align-items:flex-end;justify-content:center;
+  opacity:0;pointer-events:none;
+  transition:opacity .3s var(--ease);
+}
+#dish-modal.open{opacity:1;pointer-events:all}
+.dm-backdrop{
+  position:absolute;inset:0;
+  background:rgba(5,6,11,.82);
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+}
+.dm-card{
+  position:relative;z-index:2;
+  background:var(--inks);
+  width:100%;max-width:560px;
+  max-height:90vh;overflow-y:auto;
+  border-top:1px solid rgba(184,149,88,.18);
+  padding:36px 32px 48px;
+  transform:translateY(32px);
+  transition:transform .4s var(--ease);
+  border-radius:2px 2px 0 0;
+}
+#dish-modal.open .dm-card{transform:translateY(0)}
+@media(min-width:640px){
+  #dish-modal{align-items:center}
+  .dm-card{
+    border-radius:2px;
+    border:1px solid rgba(184,149,88,.14);
+    padding:40px 40px 44px;
+    transform:translateY(16px) scale(.97);
+    max-height:80vh;
+  }
+  #dish-modal.open .dm-card{transform:translateY(0) scale(1)}
+}
+.dm-close{
+  position:absolute;top:8px;right:8px;
+  background:none;border:none;
+  color:rgba(240,230,211,.35);
+  font-size:18px;cursor:pointer;
+  line-height:1;
+  width:48px;height:48px;
+  display:flex;align-items:center;justify-content:center;
+  transition:color .2s;
+  font-family:'Inter',sans-serif;
+}
+.dm-close:hover{color:var(--brass)}
+.dm-photo{
+  width:100%;aspect-ratio:4/3;
+  margin-bottom:24px;overflow:hidden;
+  position:relative;
+}
+.dm-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.dm-photo-placeholder{
+  font-size:8px;letter-spacing:.22em;text-transform:uppercase;
+  color:rgba(184,149,88,.2);font-family:'Inter',sans-serif;
+}
+.dm-ko{
+  font-family:'Noto Serif KR',serif;font-weight:200;
+  font-size:13px;color:rgba(184,149,88,.6);
+  letter-spacing:.1em;margin-bottom:4px;
+}
+.dm-rom{
+  font-size:9px;letter-spacing:.18em;
+  color:rgba(184,149,88,.35);font-style:italic;
+  font-family:'Inter',sans-serif;margin-bottom:10px;
+}
+.dm-name{
+  font-family:'Fraunces',serif;font-weight:200;font-style:italic;
+  font-size:clamp(20px,2.5vw,28px);
+  color:var(--cream);line-height:1.2;
+  margin-bottom:14px;font-optical-sizing:auto;
+}
+.dm-desc{
+  font-size:12px;color:var(--cm);line-height:1.82;
+  margin-bottom:20px;font-family:'Inter',sans-serif;font-weight:300;
+}
+.dm-footer{
+  display:flex;justify-content:space-between;align-items:center;
+  border-top:1px solid rgba(184,149,88,.08);padding-top:16px;
+}
+.dm-price{
+  font-family:'Fraunces',serif;font-weight:300;
+  font-size:clamp(18px,2vw,22px);color:var(--blt);
+}
+.dm-tags{display:flex;gap:6px;flex-wrap:wrap}
+
+.sec-soon{padding:48px 24px;text-align:center}
+.sec-soon-ko{font-family:'Noto Serif KR',serif;font-size:22px;font-weight:200;color:rgba(184,149,88,.25);letter-spacing:.1em;margin-bottom:8px}
+.sec-soon-en{font-size:8px;letter-spacing:.32em;text-transform:uppercase;color:rgba(184,149,88,.2);margin-bottom:20px}
+.sec-soon-d{font-size:11px;color:rgba(240,230,211,.18);line-height:1.8;font-style:italic;font-family:'Fraunces',serif;font-weight:200;max-width:280px;margin:0 auto}
+
+
+.msec-count-badge{
+  font-family:'Inter',sans-serif;font-size:8px;letter-spacing:.2em;
+  text-transform:uppercase;color:rgba(184,149,88,.3);
+  margin-bottom:16px;padding-top:4px;
+}
+
+/* ── Tap feedback on cards ── */
+.mcard{-webkit-tap-highlight-color:transparent}
+.mcard.tapping{background:rgba(184,149,88,.07)!important;transition:background .08s}
+
+@keyframes lineGlow{
+  0%   { opacity:.38; }
+  50%  { opacity:.85; }
+  100% { opacity:.38; }
+}
+
+</style>
+
+  <!-- Open Graph — social sharing -->
+  <meta property="og:type"        content="restaurant">
+  <meta property="og:title"       content="SOL · Korean BBQ · Gulshan 2, Dhaka">
+  <meta property="og:description" content="SOL is a Korean BBQ and fine dining restaurant in Gulshan 2, Dhaka — premium charcoal-grilled cuts, authentic Korean cuisine, and craft hospitality. Located at Ventura Mall. Open daily 1PM–11PM, Fri 2PM–11PM.">
+  <meta property="og:url"         content="https://soldhaka.com">
+  <meta property="og:site_name"   content="SOL Restaurant">
+  <meta property="og:locale"      content="en_US">
+  <meta name="twitter:card"        content="summary">
+  <meta name="twitter:title"       content="SOL · Korean BBQ · Dhaka">
+  <meta name="description"         content="SOL is a Korean BBQ and fine dining restaurant in Gulshan 2, Dhaka — premium charcoal-grilled cuts, authentic Korean cuisine, and craft hospitality. Located at Ventura Mall. Open daily 1PM–11PM, Fri 2PM–11PM.">
+  <link rel="canonical" href="https://soldhaka.com/">
+  <meta property="og:image" content="https://soldhaka.com/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:image" content="https://soldhaka.com/og-image.jpg">
+  <meta name="robots" content="index, follow">
+  <meta name="geo.region" content="BD-13">
+  <meta name="geo.placename" content="Dhaka">
+  <meta name="geo.position" content="23.7937;90.4066">
+  <meta name="ICBM" content="23.7937, 90.4066">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "SOL Korean BBQ",
+    "image": "https://soldhaka.com/og-image.jpg",
+    "url": "https://soldhaka.com/",
+    "telephone": "+8801332130070",
+    "priceRange": "৳৳৳",
+    "servesCuisine": ["Korean", "Korean BBQ", "Fine Dining", "Charcoal Grill"],
+    "areaServed": "Gulshan, Dhaka",
+    "description": "SOL is a premium Korean BBQ and fine dining restaurant in Gulshan 2, Dhaka, offering charcoal-grilled cuts, authentic Korean cuisine, and a curated tasting menu.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "12th Floor, Ventura Mall, Road 103",
+      "addressLocality": "Gulshan 2, Dhaka",
+      "addressRegion": "Dhaka Division",
+      "postalCode": "1212",
+      "addressCountry": "BD"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "23.7937",
+      "longitude": "90.4066"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Saturday", "Sunday"],
+        "opens": "13:00",
+        "closes": "23:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Friday"],
+        "opens": "14:00",
+        "closes": "23:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/sol.dhk",
+      "https://www.facebook.com/solrestaurant"
+    ],
+    "subjectOf": {
+      "@type": "Article",
+      "headline": "Bangladeshi craft meets Korean design at Sol restaurant",
+      "url": "https://www.tbsnews.net/features/habitat/bangladeshi-craft-meets-korean-design-sol-restaurant-1326946",
+      "publisher": {
+        "@type": "Organization",
+        "name": "The Business Standard"
+      }
+    },
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["h1", ".eyebrow", ".res-wm"]
+    },
+    "hasMenu": {
+      "@type": "Menu",
+      "name": "SOL Menu",
+      "url": "https://soldhaka.com/#menu",
+      "hasMenuSection": [
+        { "@type": "MenuSection", "name": "Korean BBQ" },
+        { "@type": "MenuSection", "name": "Chef's Path" },
+        { "@type": "MenuSection", "name": "Appetizers" },
+        { "@type": "MenuSection", "name": "Soups & Hotpot" },
+        { "@type": "MenuSection", "name": "Noodles & Rice" },
+        { "@type": "MenuSection", "name": "Mains" },
+        { "@type": "MenuSection", "name": "Raw Bar" },
+        { "@type": "MenuSection", "name": "Beverages" }
+      ]
+    }
+  }
+  </script>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="data:image/png;base64,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">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#05060b">
+</head>
+<body>
+<div id="grain" aria-hidden="true"></div>
+<div id="cur" aria-hidden="true"></div>
+<div id="prog" aria-hidden="true"></div>
+<svg style="position:absolute;width:0;height:0" xmlns="http://www.w3.org/2000/svg"><defs><filter id="nf"><feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/><feBlend in="SourceGraphic" mode="multiply"/></filter></defs></svg>
+
+<!-- PRELOADER -->
+<div id="pre" aria-hidden="true"><div id="pre-ko">솔</div><div id="pre-sol">SOL</div><div id="pre-rule"></div></div>
+
+<canvas id="pcv" aria-hidden="true"></canvas>
+
+<!-- NAV -->
+<nav role="navigation" aria-label="Main navigation">
+  <a href="#hero" class="n-logo" aria-label="SOL home"><img src="data:image/png;base64,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" alt="SOL" style="height:36px;width:auto;display:block;opacity:.9"></a>
+  <ul class="n-links">
+    <li><a href="#philo">Philosophy</a></li>
+    <li><a href="#amb">The Space</a></li>
+    <li><a href="#res">Reserve</a></li>
+  </ul>
+  <a href="#res" class="n-cta"><span>Reserve</span></a>
+</nav>
+
+<!-- MENU OVERLAY -->
+<div id="mo" role="dialog" aria-label="SOL Menu" aria-modal="true">
+  <div class="mo-hd">
+    <div class="mo-hd-l">
+      <div class="mo-hd-logo"><img src="data:image/png;base64,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" alt="SOL" style="height:24px;width:auto;display:block;opacity:.78"></div>
+      <div class="mo-hd-title">The Menu</div>
+    </div>
+    <button class="mo-close" id="close-menu">Close ✕</button>
+  </div>
+  <!-- Tab bar -->
+  <div class="mo-tabs-wrap">
+    <div class="mo-tabs" id="mo-tabs"></div>
+  </div>
+  <!-- Body -->
+  <div class="mo-body">
+    <nav class="mo-snav" id="mo-snav" aria-label="Section navigation"></nav>
+    <div class="mo-panels" id="mo-panels"></div>
+  </div>
+  <!-- Prev / Next nav -->
+  <div class="sec-nav" id="sec-nav">
+    <button class="sec-nav-btn" id="sec-prev">
+      <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.2"><polyline points="9,2 4,7 9,12"/></svg>
+      <span id="prev-label">Previous</span>
+    </button>
+    <span class="sec-nav-center" id="sec-counter"></span>
+    <button class="sec-nav-btn" id="sec-next">
+      <span id="next-label">Next</span>
+      <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.2"><polyline points="5,2 10,7 5,12"/></svg>
+    </button>
+  </div>
+</div>
+
+<!-- HERO -->
+<section id="hero" aria-label="SOL Korean Fine Dining">
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+  <div class="hero-vignette" aria-hidden="true"></div>
+
+  <div class="hc">
+    <div class="h-eye" lang="ko">솔 · 서울의 정수 · 달카</div>
+    <h1 class="h-mark">SOL<span class="visually-hidden"> — Korean BBQ Restaurant in Gulshan 2, Dhaka</span></h1>
+    <div class="h-divider" aria-hidden="true">
+      <span class="h-divider-line"></span>
+      <span class="h-ko" lang="ko">솔</span>
+      <span class="h-divider-line r"></span>
+    </div>
+    <p class="h-tag">Where fire meets craft. Korean BBQ, elevated.</p>
+    <button class="h-cta" id="open-menu"><span>Explore the Menu</span></button>
+  </div>
+  <div class="sc-ind" aria-hidden="true"><div class="sc-line"><div class="sc-dot"></div></div></div>
+</section>
+
+<!-- SECTION DIVIDER -->
+<div class="sec-divider" aria-hidden="true">
+  <div class="sec-divider-line"></div>
+  <div class="sec-divider-mark">
+    <span class="sec-divider-dot"></span>
+    <span class="sec-divider-ko">솔</span>
+    <span class="sec-divider-dot"></span>
+  </div>
+</div>
+
+<!-- THRESHOLD -->
+<section id="threshold" aria-label="The Space">
+  <p class="thr-quote" id="thr-q">
+    <span class="word">A</span>
+    <span class="word">heavy</span>
+    <span class="word">wooden</span>
+    <span class="word">door.</span>
+    <span class="word">The</span>
+    <span class="word">city</span>
+    <span class="word">disappears.</span>
+    <span class="word">A</span>
+    <span class="word">garden</span>
+    <span class="word">forecourt,</span>
+    <span class="word">still</span>
+    <span class="word">and</span>
+    <span class="word">unhurried,</span>
+    <span class="word">marks</span>
+    <span class="word">the</span>
+    <span class="word">threshold.</span>
+  </p>
+  <div class="thr-materials">
+    <div class="thr-mat-3d">
+      <canvas class="thr-cv" id="thr-cv-0" data-ko="목재" data-phase="0"></canvas>
+      <span class="thr-mat-en">Wood</span>
+    </div>
+    <div class="thr-sep-3d" aria-hidden="true"></div>
+    <div class="thr-mat-3d">
+      <canvas class="thr-cv" id="thr-cv-1" data-ko="돌" data-phase="2.1"></canvas>
+      <span class="thr-mat-en">Stone</span>
+    </div>
+    <div class="thr-sep-3d" aria-hidden="true"></div>
+    <div class="thr-mat-3d">
+      <canvas class="thr-cv" id="thr-cv-2" data-ko="참숯" data-phase="4.2"></canvas>
+      <span class="thr-mat-en">Charcoal</span>
+    </div>
+  </div>
+</section>
+
+<!-- AMBIANCE -->
+<section id="amb" aria-label="The Space">
+  <video id="amb-vid" class="amb-vid" autoplay muted loop playsinline preload="metadata" poster="ambiance-poster.jpg" aria-hidden="true">
+    <source src="ambiance.mp4" type="video/mp4">
+  </video>
+  <div class="amb-vignette" aria-hidden="true"></div>
+  <div class="amb-c">
+    <p class="amb-q reveal">"The fire is the kitchen. The table is the stage."</p>
+    <div class="amb-meta reveal">
+      <span class="amb-i"><span class="amb-ko">참숯</span>Real Charcoal</span>
+      <div class="amb-sep"></div>
+      <span class="amb-i"><span class="amb-ko">직화</span>Live Fire</span>
+      <div class="amb-sep"></div>
+      <span class="amb-i"><span class="amb-ko">코리안 바비큐</span>Korean BBQ</span>
+    </div>
+  </div>
+</section>
+
+<!-- PHILOSOPHY -->
+<section id="philo" aria-labelledby="ph-h">
+  <div class="ph-center">
+    <div class="ph-orb-wrap" aria-hidden="true">
+      <canvas id="ph-orb" class="ph-orb-cv"></canvas>
+    </div>
+    <h2 class="eyebrow reveal">Philosophy</h2>
+    <blockquote class="ph-q reveal" id="ph-h">Wood, stone, and fire —<br>Bangladeshi hands, Korean memory.</blockquote>
+    <p class="ph-note reveal">As featured in <a href="https://www.tbsnews.net/features/habitat/bangladeshi-craft-meets-korean-design-sol-restaurant-1326946" target="_blank" rel="noopener" style="color:var(--brass);text-decoration:none;border-bottom:1px solid rgba(184,149,88,.3)">The Business Standard</a></p>
+  </div>
+</section>
+
+
+
+
+
+<!-- RESERVE -->
+<section id="res" aria-labelledby="res-h">
+  <div class="res-in">
+    <div class="res-hd">
+      <h2 class="res-wm reveal" id="res-h">Reserve</h2>
+      <div class="res-ko reveal" lang="ko">예약</div>
+    </div>
+    <form class="fg" onsubmit="doSub(event)" aria-label="Reservation request">
+      <div class="ff reveal"><label for="r-fn">First Name</label><input type="text" id="r-fn" placeholder="First name" autocomplete="given-name" required></div>
+      <div class="ff reveal"><label for="r-ln">Last Name</label><input type="text" id="r-ln" placeholder="Last name" autocomplete="family-name" required></div>
+      <div class="ff reveal"><label for="r-dt">Date of Visit</label><input type="date" id="r-dt" required style="color-scheme:dark"></div>
+      <div class="ff reveal"><label for="r-tm">Time</label>
+        <select id="r-tm" required>
+        <option value="" disabled selected>Select a time</option>
+        <option value="13:00">1:00 PM</option>
+        <option value="13:30">1:30 PM</option>
+        <option value="14:00">2:00 PM</option>
+        <option value="14:30">2:30 PM</option>
+        <option value="15:00">3:00 PM</option>
+        <option value="15:30">3:30 PM</option>
+        <option value="16:00">4:00 PM</option>
+        <option value="16:30">4:30 PM</option>
+        <option value="17:00">5:00 PM</option>
+        <option value="17:30">5:30 PM</option>
+        <option value="18:00">6:00 PM</option>
+        <option value="18:30">6:30 PM</option>
+        <option value="19:00">7:00 PM</option>
+        <option value="19:30">7:30 PM</option>
+        <option value="20:00">8:00 PM</option>
+        <option value="20:30">8:30 PM</option>
+        <option value="21:00">9:00 PM</option>
+        <option value="21:30">9:30 PM</option>
+        <option value="22:00">10:00 PM</option>
+        <option value="22:30">10:30 PM</option>
+        <option value="23:00">11:00 PM</option>
+        </select>
+      </div>
+      <div class="ff full reveal"><label for="r-si">Special Instructions</label><textarea id="r-si" rows="3" placeholder="Dietary requirements, allergies, occasions, special requests…"></textarea></div>
+      <div class="res-cta-row full reveal">
+        <a href="tel:+8801332130070" class="res-call-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" style="width:13px;height:13px;flex-shrink:0"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.91a16 16 0 0 0 6 6l.9-.9a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21.27 16z"/></svg>
+          Call to Reserve
+        </a>
+        <button type="submit" class="sub-btn res-wa-btn"><span id="sub-l">
+          <svg viewBox="0 0 24 24" fill="currentColor" style="width:13px;height:13px;flex-shrink:0;vertical-align:middle;margin-right:6px"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          Send via WhatsApp
+        </span></button>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="ft-ghost" aria-hidden="true">솔</div>
+  <div class="ft-in">
+    <img src="data:image/png;base64,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" alt="SOL" style="height:30px;width:auto;display:block;margin:0 auto 14px;opacity:.65">
+    <div class="ft-rule"></div>
+    <div class="ft-coords">23.7937° N, 90.4066° E · 12th Floor, Ventura Mall, Gulshan 2</div>
+    <div class="ft-socials">
+      <a href="https://www.instagram.com/sol.dhk" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor" stroke="none"/></svg></a>
+      <a href="https://www.facebook.com/solrestaurant" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+    </div>
+    <div class="ft-nav"><a href="#philo">Philosophy</a><a href="#amb">The Space</a><a href="#res">Reserve</a></div>
+    <div class="ft-copy">© 2026 SOL · Korean BBQ · Ventura Mall, Gulshan 2, Dhaka</div>
+    <button class="ft-print" id="hero-print-btn" aria-label="Print menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" style="width:12px;height:12px;display:inline-block;vertical-align:middle;margin-right:6px">
+        <polyline points="6 9 6 2 18 2 18 9"/>
+        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
+        <rect x="6" y="14" width="12" height="8"/>
+      </svg>Print Menu
+    </button>
+  </div>
+</footer>
+
+<script>
+/* ╔══════════════════════════════════════════════════════════════╗
+   ║            S O L   C O N T E N T   L A Y E R                ║
+   ║                                                              ║
+   ║  This is the ONLY block you need to edit.                    ║
+   ║  ─────────────────────────────────────────                   ║
+   ║  meta    → restaurant name, phone, email, social, address    ║
+   ║  photos  → dish name → base64 or https:// URL               ║
+   ║                                                              ║
+   ║  To update menu items / prices:                              ║
+   ║  Search for ITEMS= below and edit the matching object.       ║
+   ║  To update BBQ cuts: search for BBQ=                         ║
+   ║  To update tasting courses: search for SIG=                  ║
+   ╚══════════════════════════════════════════════════════════════╝ */
+const SOL_DATA = {
+
+  /* ── RESTAURANT META ─────────────────────────────────────────
+     Update contact details, social links, address here.        */
+  meta: {
+    name:        'SOL Korean BBQ',
+    tagline:     'Wood. Stone. Fire.',
+    phone:       '+8801332130070',
+    whatsapp:    '+8801332130070',
+    email:       'sol.restaurant.bd@gmail.com',
+    instagram:   'https://www.instagram.com/sol.dhk',
+    facebook:    'https://www.facebook.com/solrestaurant',
+    address:     '12th Floor, Ventura Mall, Road 103, Gulshan 2, Dhaka-1212',
+    coordinates: '23.7937° N, 90.4066° E',
+    ga4:         'G-J2NMGJH10Y',
+    hours:       'Daily 1PM–11PM · Fri 2PM–11PM',
+  },
+
+  /* ── DISH PHOTOS ─────────────────────────────────────────────
+     Key  = exact English dish name (must match en: in ITEMS).
+     Value = base64 data URI  OR  any https:// image URL.
+     Example:
+       'Mosaic Kimbap': 'https://example.com/mosaic.jpg',
+       'Wagyu A5 Ribeye': 'data:image/jpeg;base64,...',        */
+  photos: {},
+
+};
+/* ── Apply meta to page ───────────────────────────────────────── */
+(function(){
+  var m = SOL_DATA.meta;
+  /* GA4 */
+  if(m.ga4 && m.ga4 !== 'G-XXXXXXXXXX'){
+    var s=document.createElement('script');
+    s.src='https://www.googletagmanager.com/gtag/js?id='+m.ga4;
+    s.async=true; document.head.appendChild(s);
+    window.dataLayer=window.dataLayer||[];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js',new Date()); gtag('config',m.ga4);
+  }
+  /* Dish photos — merge into DISH_PHOTOS after page loads */
+  document.addEventListener('DOMContentLoaded',function(){
+    if(typeof DISH_PHOTOS !== 'undefined'){
+      Object.assign(DISH_PHOTOS, SOL_DATA.photos);
+    }
+  });
+})();
+/* ── End of editable content layer ─────────────────────────────── */
+
+
+const fmt=n=>'৳ '+n.toLocaleString('en-IN');
+
+/* ═══ MENU DATA ═══ */
+// Groups define top-level tabs; sections within each group appear in left nav
+const GROUPS=[
+  {id:'grill',label:'Korean BBQ',sections:[
+    {id:'bbq',label:'BBQ Cuts',num:'',ko:'한국식 바베큐'},
+  ]},
+  {id:'chef',label:"Chef's Path",sections:[
+    {id:'signature',label:'Signature',num:'',ko:'시그니처'},
+  ]},
+  {id:'starters',label:'To Begin',sections:[
+    {id:'mandu',label:'Mandu',num:'I',ko:'만두',sub:'Dumplings'},
+    {id:'kimbap',label:'Kimbap',num:'II',ko:'김밥',sub:'Seaweed rolls'},
+    {id:'appetizers',label:'Appetizers',num:'III',ko:'에피타이저'},
+    {id:'salad',label:'Salad',num:'IV',ko:'샐러드'},
+  ]},
+  {id:'soups',label:'Soups & Hotpot',sections:[
+    {id:'soup-stew',label:'Soups',num:'V',ko:'국·찌개'},
+    {id:'hotpot',label:'Hotpot',num:'VI',ko:'전골'},
+  ]},
+  {id:'mains',label:'Mains',sections:[
+    {id:'chicken',label:'Chicken',num:'VII',ko:'닭'},
+    {id:'beef',label:'Beef',num:'VIII',ko:'소고기'},
+    {id:'seafood',label:'Seafood',num:'IX',ko:'해산물'},
+    {id:'vegetable',label:'Vegetable',num:'X',ko:'채소'},
+  ]},
+  {id:'rice-noodle',label:'Rice & Noodles',sections:[
+    {id:'noodles',label:'Noodles',num:'XI',ko:'면'},
+    {id:'rice',label:'Rice & Bibimbap',num:'XII',ko:'밥·비빔밥'},
+    {id:'sotbap',label:'Sotbap',num:'XIII',ko:'솥밥',sub:'Claypot rice'},
+  ]},
+  {id:'raw',label:'Raw Bar',sections:[
+    {id:'hoe',label:'Hoe',num:'XIV',ko:'회',sub:'Sashimi'},
+    {id:'chobap',label:'Chobap',num:'XV',ko:'초밥',sub:'Nigiri'},
+  ]},
+  {id:'close',label:'The Close',sections:[
+    {id:'beverages',label:'Beverages',num:'XVI',ko:'음료'},
+    {id:'dessert',label:'Dessert',num:'XVII',ko:'디저트'},
+  ]},
+];
+
+const ITEMS=[
+  /* ── HOE (Sashimi) ── */
+  {s:'hoe',ko:'모둠회',rom:'Modeum Hoe',en:'Assorted Sashimi',d:'Eel, salmon, tuna, and scallop — sliced to order, served over crushed ice with perilla, crisp seaweed and house dipping sauce.',p:[{a:5100}],t:['seafood','premium','sig']},
+  {s:'hoe',ko:'연어회',rom:'Salmon Hoe',en:'Salmon Sashimi',d:'Premium salmon sliced thin and served at the precise temperature where the fat is alive — clean, delicate, and nothing more.',p:[{l:'3 pcs',a:1350},{l:'5 pcs',a:2150}],t:['seafood']},
+  {s:'hoe',ko:'참치회',rom:'Tuna Hoe',en:'Tuna Sashimi',d:'Deep-red tuna brought to room temperature so the richness fully opens — served with wasabi and a soy that stays in the background.',p:[{l:'3 pcs',a:1450},{l:'5 pcs',a:2250}],t:['seafood','premium']},
+  {s:'hoe',ko:'장어회',rom:'Jangeo Hoe',en:'Eel Sashimi',d:'Eel sashimi sliced with precision — its natural sweetness present before any sauce, the texture firm and clean.',p:[{l:'3 pcs',a:1750},{l:'5 pcs',a:2950}],t:['seafood','premium']},
+  /* ── CHOBAP (Nigiri) ── */
+  {s:'chobap',ko:'모둠초밥',rom:'Modeum Chobap',en:'Assorted Nigiri',d:'Eel, salmon, tuna and scallop pressed over vinegared rice — each piece made to order, the fish at room temperature so the fat is fully awake.',p:[{a:2980}],t:['seafood','premium','sig']},
+  {s:'chobap',ko:'연어초밥',rom:'Salmon Chobap',en:'Salmon Nigiri',d:'Flame-seared salmon over seasoned rice — the heat applied only enough to release the oil, leaving the centre cool and silky.',p:[{l:'2 pcs',a:750},{l:'4 pcs',a:1490}],t:['seafood']},
+  {s:'chobap',ko:'참치초밥',rom:'Tuna Chobap',en:'Tuna Nigiri',d:'Tuna pressed over vinegared rice at the exact moment the fish is at room temperature — the result is a single clean flavour, nothing competing.',p:[{l:'2 pcs',a:850},{l:'4 pcs',a:1650}],t:['seafood']},
+  {s:'chobap',ko:'장어초밥',rom:'Jangeo Chobap',en:'Eel Nigiri',d:'Glazed eel over delicate sushi rice — the lacquered sweetness of the eel settles into the vinegared grain.',p:[{l:'2 pcs',a:1150},{l:'4 pcs',a:2250}],t:['seafood','premium']},
+  /* ── MANDU (Dumplings) ── */
+  {s:'mandu',ko:'트러플 비프 만두',rom:'Truffle Sogogi Mandu',en:'Truffle Beef Dumpling',d:'Beef folded with truffle oil, ginger and scallion inside a thin steamed skin — the truffle is present but never loud, letting the beef carry the weight.',p:[{a:1150}],t:['sig','premium']},
+  {s:'mandu',ko:'마라튀김만두',rom:'Saeu Mala Mandu',en:'Prawn & Chicken Fried Dumplings',d:'Prawn and chicken fried until the pleated base crisps and the skin blisters — finished with mala spice that numbs the lips and keeps you reaching for the next one.',p:[{a:1150}],t:['spicy','seafood']},
+  {s:'mandu',ko:'소고기김치만두',rom:'Sogogi Gimchi Mandu',en:'Beef Kimchi Dumplings',d:'Aged kimchi and spiced beef packed into a pan-fried skin — the kimchi\'s sourness and the beef\'s richness have nowhere to go but into each other.',p:[{a:980}],t:[]},
+  {s:'mandu',ko:'그린 매듭 만두',rom:'Geurin Maedeub Mandu',en:'Green Knot Dumplings',d:'Chicken and shiitake folded inside translucent rice paper and tied at the top — the wrapper reveals everything inside before you open it.',p:[{a:850}],t:[]},
+  {s:'mandu',ko:'닭고기 만두',rom:'Dakgogi Mandu',en:'Chicken Cheese Dumplings',d:'Steamed until the skin turns translucent and the cheese inside goes completely molten — bite carefully, the first one always surprises.',p:[{a:750}],t:[]},
+  {s:'mandu',ko:'새우만두',rom:'Saeu Mandu',en:'Prawn Mandu',d:'Tender chicken and prawn folded together in a light, thin-skinned dumpling — clean flavour, gentle bite.',p:[{a:750}],t:['seafood']},
+  {s:'mandu',ko:'양배추만두',rom:'Yangbaechu Mandu',en:'Chicken Cabbage Dumplings',d:'Light chicken, cabbage, and tofu wrapped in a delicate, thin skin for a subtle bite.',p:[{a:680}],t:[]},
+  /* ── KIMBAP ── */
+  {s:'kimbap',ko:'모자이크 김밥',rom:'Mosaic Kimbap',en:'Mosaic Kimbap',d:'Named for what it reveals when sliced — a mosaic of salmon, tuna, crab stick, cream cheese and avocado. Each cross-section a small piece of edible art.',p:[{a:1850}],t:['sig']},
+  {s:'kimbap',ko:'로제 김밥',rom:'Rosé Kimbap',en:'Rosé Kimbap',d:'Pink-tinted rice wrapped around salmon, cream cheese and crab stick — it arrives looking like something from a different world, and tastes as good as it looks.',p:[{a:1790}],t:['seafood']},
+  {s:'kimbap',ko:'우나기 김밥',rom:'Unagi Kimbap',en:'Unagi Kimbap',d:'Glazed eel with avocado and spicy mayo rolled into seasoned rice — the eel\'s caramelised sweetness meets the cool creaminess of avocado in every bite.',p:[{a:1760}],t:['seafood']},
+  {s:'kimbap',ko:'깻잎 불고기 김밥',rom:'Gaennip Bulgogi Kimbap',en:'Kkaennip Bulgogi Kimbap',d:'Tender bulgogi meets aromatic kkaennip leaf — a balanced, modern roll where sweet soy and fresh herb find each other.',p:[{a:1150}],t:[]},
+  {s:'kimbap',ko:'참치김밥',rom:'Chamchi Kimbap',en:'Cabbage Tuna Kimbap',d:'Shredded cabbage and tuna folded together — a creamy, familiar bite with clean contrast.',p:[{a:1150}],t:['seafood']},
+  {s:'kimbap',ko:'맛살 김밥',rom:'Matsal Kimbap',en:'Crab Stick Kimbap',d:'Crab stick and cream cheese rolled with spinach and seasoned rice — smooth, delicate, and quietly satisfying.',p:[{a:950}],t:['seafood']},
+  /* ── APPETIZERS ── */
+  {s:'appetizers',ko:'꿀새우볼',rom:'Ggul Saewoo Ball',en:'Honey Shrimp Ball',d:'Golden-fried shrimp balls lacquered in a citrus-honey glaze — crisp shell, yielding centre, sweet heat that lingers at the back.',p:[{a:950}],t:['seafood','sig']},
+  {s:'appetizers',ko:'새우튀김',rom:'Saeu Twigim',en:'Korean Prawn Tempura',d:'Whole prawns in a batter so thin it barely exists — fried to a shattering crisp and served with a soy dip that brings everything into focus.',p:[{a:1450}],t:['seafood']},
+  {s:'appetizers',ko:'오징어튀김',rom:'Ojingeo Twigim',en:'Cuttlefish Tempura',d:'Cuttlefish sliced thick and battered to an almost translucent crisp — tender inside, a clean ocean flavour that the light batter never overwhelms.',p:[{a:1450}],t:['seafood']},
+    {s:'appetizers',ko:'해물파전',rom:'Haemul Pajeon',en:'Seafood Scallion Pancake',d:'Haemul pajeon — a wide, golden pancake of prawn and cuttlefish with charred scallion edges. Cut tableside.',p:[{a:1380}],t:['seafood']},
+  {s:'appetizers',ko:'닭양파',rom:'Dak Yangpa',en:'Crispy Snow Chicken',d:'Crackling fried chicken beneath a drift of cold cream and raw onion — the contrast between hot and cold, crisp and cool, is the whole point.',p:[{a:1280}],t:[]},
+  {s:'appetizers',ko:'콘치즈',rom:'Kkon-Chijeu',en:'Corn Parmesan Cheese',d:'Prawn, crabstick and sweet corn enfolded in warm, stretching mozzarella — finished with parmesan that browns and crisps at the edges.',p:[{a:1350}],t:['seafood']},
+    {s:'appetizers',ko:'로제 떡볶이',rom:'Rosé Tteokbokki',en:'Creamy Rosé Rice Cake',d:'Thick-cut rice cakes pulled through a blush rosé-gochujang cream — silky, gently spiced, with a heat that never overwhelms the sweetness.',p:[{a:1950}],t:['spicy','veg']},
+  {s:'appetizers',ko:'떡볶이',rom:'Tteokbokki',en:'Spicy Rice Cake',d:'Thick rice cakes simmered in a dark, deeply reduced gochujang that clings to every surface — spicy, sticky, and nearly irresistible.',p:[{a:1650}],t:['spicy','veg']},
+    {s:'appetizers',ko:'김치전',rom:'Kimchi Jeon',en:'Kimchi Pancake',d:'Aged kimchi folded into a batter and pressed wide on a hot iron until the edges turn deeply golden — tangy, rich, and impossible to share.',p:[{a:900}],t:['spicy']},
+  {s:'appetizers',ko:'계란찜',rom:'Gyeran-Jjim',en:'Steamed Egg Custard',d:'Egg steamed until it trembles — a cloud-light custard barely set, seasoned with melted soft cheese that pools at the surface.',p:[{a:650}],t:['veg']},
+  {s:'appetizers',ko:'닭강정',rom:'Dak-Gang Jeong',en:'Crispy Glazed Chicken',d:'Fried chicken pieces tossed in a dark, sticky glaze — sesame and walnut add crunch where the coating meets the sauce.',p:[{a:1100}],t:[]},
+  {s:'appetizers',ko:'양념치킨',rom:'Yangnyeom Chicken',en:'Sweet & Spicy Fried Chicken',d:'Double-fried until the crust locks in, then tossed in a glossy chili-sweet sauce that coats every ridge — sticky, addictive, and better than you expect.',p:[{a:1190}],t:['spicy']},
+  /* ── SALAD ── */
+  {s:'salad',ko:'연어 샐러드',rom:'Yeoneo Salad',en:'Salmon Avocado Salad',d:'Salmon and avocado layered with sweet orange and cream cheese over crisp lettuce — bright, creamy and citrus-lifted, with a clean finish that makes you want another forkful.',p:[{a:2350}],t:['seafood']},
+  {s:'salad',ko:'게 새우 샐러드',rom:'Ge-saeu Salad',en:'Crab Prawn Salad',d:'Sweet crab and crispy prawns over fresh greens in a silky mayo dressing — a lively balance of crunch, creaminess, and brine that opens the palate.',p:[{a:1650}],t:['seafood']},
+  {s:'salad',ko:'호두 샐러드',rom:'Hodu Salad',en:'Walnut Salad',d:'Lettuce and red cabbage with toasted walnuts and dried dashima — tossed in a savoury vinaigrette that earns its place as the quietest, most considered dish on the table.',p:[{a:1550}],t:['veg']},
+  {s:'salad',ko:'오징어 무침',rom:'Ojing-eo Muchim',en:'Spicy Cuttlefish Salad',d:'Chilled cuttlefish and crisp vegetables in a bright gochugaru chili-vinegar dressing — cold, bold, and deeply refreshing.',p:[{a:1450}],t:['spicy','seafood']},
+  {s:'salad',ko:'감자샐러드',rom:'Gamja Salad',en:'Potato Salad',d:'Korean-style potato salad — smooth and lightly sweet, with a softness that contrasts every crisp and char that comes after it.',p:[{a:850}],t:['veg']},
+  /* ── SOUP & STEW ── */
+  {s:'soup-stew',ko:'갈비탕',rom:'Galbitang',en:'Beef Short Rib Soup',d:'A long-simmered bone broth so clear you can see the short ribs at the bottom — radish softened through, glass noodles folded in. One of the most quietly impressive dishes on the menu.',p:[{a:1780}],t:[]},
+  {s:'soup-stew',ko:'해물탕',rom:'Haemul Tang',en:'Seafood Soft Tofu Stew',d:'Silken tofu trembling in a fiery seafood broth — prawn, cuttlefish and octopus beneath the surface, the heat arriving slowly and staying.',p:[{a:1680}],t:['spicy','seafood']},
+  {s:'soup-stew',ko:'소꼬리탕',rom:'Kkori Gomtang',en:'Oxtail Soup',d:'Oxtail simmered for hours until the collagen dissolves into the broth — milky, deeply savoury, with meat that slides from the bone without resistance.',p:[{a:1480}],t:[]},
+  {s:'soup-stew',ko:'꼬리 우거지 곰탕',rom:'Kkori Ugeoji Gomtang',en:'Slow Simmered Oxtail Stew',d:'Oxtail braised low and slow until the broth thickens around it — fresh cabbage added late to keep its crunch against the yielding meat.',p:[{a:1580}],t:[]},
+  {s:'soup-stew',ko:'김치찌개',rom:'Kimchi Jjigae',en:'Kimchi Stew with Beef',d:'Aged kimchi and beef simmered until the kimchi loses its edge and takes on a deep, rounded sourness — the broth turns brick-red and lingers.',p:[{a:1350}],t:['spicy']},
+  {s:'soup-stew',ko:'육개장',rom:'Yuk Gae Jang',en:'Spicy Shredded Beef Soup',d:'Hand-shredded beef pulled through a fiery gochugaru broth with glass noodles and vegetables — deep red, deeply warming, built for the coldest nights.',p:[{a:1050}],t:['spicy']},
+  {s:'soup-stew',ko:'닭개장',rom:'Dak Gae Jang',en:'Spicy Chicken Soup',d:'Chicken shredded by hand and returned to its own broth — gochugaru heat builds with each spoonful, the glass noodles absorbing every bit of it.',p:[{a:850}],t:['spicy']},
+  {s:'soup-stew',ko:'된장찌개',rom:'Doenjang Jjigae',en:'Soybean Paste Stew',d:'Fermented soybean paste slow-dissolved into a broth that smells like a Korean home — earthy, umami-deep, with soft tofu and garden vegetables.',p:[{a:850}],t:['veg']},
+  /* ── HOTPOT ── */
+  {s:'hotpot',ko:'불고기 전골',rom:'Bulgogi Jeongol',en:'Bulgogi Hotpot',d:'Marinated bulgogi beef lowered into a bubbling broth tableside — glass noodles, mushrooms and vegetables follow, absorbing the sweetened soy as the pot builds in depth.',p:[{a:3750}],t:['sig']},
+  {s:'hotpot',ko:'부대찌개',rom:'Budae Jjigae',en:'Korean Army Stew',d:'Born in post-war Korea from whatever was available — beef, sausage, tuna, fishcake, kimchi, tofu, corn and noodles in a deep chili broth. Chaotic by design, and entirely its own thing.',p:[{a:3650}],t:['spicy']},
+  {s:'hotpot',ko:'불낙전골',rom:'Bulnak Jeongol',en:'Bulnak Hotpot',d:'Beef and octopus in a fiery red broth — shiitake mushroom and bok choy added tableside. The octopus tightens as it cooks, the beef surrenders. Order this when you want heat that means something.',p:[{a:2850}],t:['spicy','seafood']},
+  /* ── CHICKEN ── */
+  {s:'chicken',ko:'치즈닭갈비',rom:'Tableside Dak-Galbi',en:'Tableside Dak Galbi',d:'Spicy chicken galbi cooked on a cast iron until the sauce darkens at the edges — finished with a blanket of molten cheese that stretches at the pull.',p:[{a:2450}],t:['spicy']},
+  {s:'chicken',ko:'안동찜닭',rom:'Andong Jjimdak',en:'Braised Chicken with Glass Noodles',d:'Bone-in chicken and glass noodles slow-braised in soy, garlic and ginger until the noodles drink up the sauce and the chicken yields at a touch.',p:[{a:1650}],t:[]},
+  {s:'chicken',ko:'닭도리탕',rom:'Dakdoritang',en:'Spicy Chicken Stew',d:'Bone-in chicken pieces simmered in a fiery gochugaru broth until the meat begins to fall — rich, warming, and deeply satisfying on a cold night.',p:[{a:1600}],t:['spicy']},
+  {s:'chicken',ko:'보쌈닭',rom:'Bossam Dak',en:'Bossam Chicken',d:'Soft-braised chicken served bossam-style with crisp lettuce leaves for wrapping — a quiet, composed dish with clean flavour.',p:[{a:1450}],t:[]},
+      {s:'chicken',ko:'닭불고기',rom:'Dak Bulgogi',en:'Chicken Bulgogi',d:'Chicken marinated in a soy-pear bulgogi base and cooked until the edges catch — aromatic, lightly caramelised, and far lighter than its beef counterpart.',p:[{a:1350}],t:[]},
+  {s:'chicken',ko:'매운 닭불고기',rom:'Maeun Dak Bulgogi',en:'Spicy Chicken Bulgogi',d:'Chicken in a bulgogi marinade turned up with gochugaru — the sweetness keeps pace with the heat, and neither wins.',p:[{a:1350}],t:['spicy']},
+  {s:'chicken',ko:'닭구이',rom:'Dak Gui',en:'Charcoal Grilled Chicken',d:'Whole chicken pieces over live charcoal until the skin crisps and the smoke gets inside. Served simply, because it needs nothing else.',p:[{a:950}],t:[]},
+  /* ── BEEF ── */
+  {s:'beef',ko:'갈비찜',rom:'Galbi-jjim',en:'Braised Short Rib',d:'Galbi-jjim — short rib braised for hours until the bone surrenders. Sweet soy, chestnuts, carrot, and radish absorb every drop.',p:[{a:2550}],t:['sig']},
+  {s:'beef',ko:'동파로우',rom:'Dongpo Ro-u',en:'Dongpo-Style Braised Beef',d:'Pork belly braised for hours in a dark soy and Shaoxing reduction until every layer yields completely — served with bok choy, the sauce glossy enough to see your reflection.',p:[{a:2450}],t:['sig']},
+  {s:'beef',ko:'소불고기',rom:'So Bulgogi',en:'Beef Bulgogi',d:'Paper-thin slices of beef in the marinade that made Korean cooking famous — soy, pear, sesame, and a touch of sweetness that caramelises at the edges.',p:[{a:1950}],t:[]},
+  {s:'beef',ko:'매운소불고기',rom:'Maeun-So Bulgogi',en:'Spicy Beef Bulgogi',d:'The same tender bulgogi, pulled in a hotter direction — gochugaru heat building slowly over sweet soy, finished with sesame and spring onion.',p:[{a:1950}],t:['spicy']},
+  {s:'beef',ko:'불고기찜',rom:'Bulgogi-jjim',en:'Braised Bulgogi',d:'Bulgogi left in the pot long enough to surrender fully — the soy, garlic and ginger reducing into a glossy, deeply savoury braise that coats the meat completely.',p:[{a:1850}],t:[]},
+  {s:'beef',ko:'꼬리찜',rom:'Kori Jjim',en:'Braised Oxtail',d:'Slow-braised oxtail falling off the bone in a deep, aromatic broth of garlic, ginger, and Korean spices — rich and unhurried.',p:[{a:1650}],t:[]},
+  /* ── SEAFOOD ── */
+  {s:'seafood',ko:'고등어구이',rom:'Godeungeo Gui',en:'Japanese Grilled Mackerel',d:'Whole Japanese mackerel grilled over high heat until the skin blisters and chars at the spine — the flesh underneath stays moist and oily-rich. Served with pickled sides that cut clean through.',p:[{a:4360}],t:['seafood']},
+  {s:'seafood',ko:'대구카퍼',rom:'Caper Cod Saengseon',en:'Caper Cod Fish',d:'Cod seared until a golden crust forms, finished with a butter emulsion of lemon and capers that cuts cleanly through the richness.',p:[{a:3950}],t:['seafood']},
+  {s:'seafood',ko:'장어찜',rom:'Jang-eo Jjim',en:'Steamed Whole Sea Bass',d:'Whole sea bass steamed until the flesh pulls apart in clean white flakes — barely seasoned, finished with red chili and ginger oil poured hot over the surface.',p:[{a:3790}],t:['seafood']},
+  {s:'seafood',ko:'장어구이',rom:'Jangeo Gui',en:'Grilled Eel',d:'Eel grilled over live charcoal until the skin blisters and caramelises — finished with a lacquered reduction that deepens everything. Rich, precise, and memorable.',p:[{a:3490}],t:['seafood','premium']},
+  {s:'seafood',ko:'연어구이두부크림',rom:'Salmon Gui Dubu Beureom',en:'Grilled Salmon in Cream',d:'Salmon grilled until the skin is lacquer-crisp, set over a smooth cream of silken tofu and peanut — nutty, savoury, and completely unexpected.',p:[{a:2150}],t:['seafood']},
+  {s:'seafood',ko:'문어볶음',rom:'Muneo Bokkeum',en:'Spicy Octopus Stir-fry',d:'Thick-cut octopus seared over high heat with the chef\'s signature seasoning — bold, chewy, and deeply aromatic.',p:[{a:1920}],t:['spicy','seafood']},
+  {s:'seafood',ko:'생선구이',rom:'Saengseon Gui',en:'Fried Sea Bass',d:'Sea bass fried whole until the skin is glass-crisp — finished with a bright pour of citrus and ginger that hisses against the hot surface and perfumes the table.',p:[{a:1890}],t:['seafood']},
+  {s:'seafood',ko:'해물볶음',rom:'Haemul Bokkeum',en:'Seafood Stir-fry',d:'Crab, prawn, cuttlefish and octopus hit a screaming-hot wok with gochujang — the sauce caramelises at the edges and the seafood takes on a char that the sauce alone cannot give.',p:[{a:1890}],t:['spicy','seafood']},
+  /* ── VEGETABLE ── */
+  {s:'vegetable',ko:'버섯강정',rom:'Beoseot Gangjeong',en:'Sweet Crispy Mushrooms',d:'A trio of shiitake, king oyster, and oyster mushrooms — battered, fried crisp, then glazed in sweet soy. The coating shatters, the mushroom beneath stays soft.',p:[{a:1150}],t:['veg','sig']},
+  {s:'vegetable',ko:'두부김치',rom:'Dubu Kimchi',en:'Tofu Kimchi',d:'Aged kimchi stir-fried with tofu and shiitake until the kimchi caramelises and turns a deep brick-red — the tofu absorbs everything around it.',p:[{a:900}],t:['veg']},
+  {s:'vegetable',ko:'두부강정',rom:'Dubu-gangjeong',en:'Soy Glazed Crispy Tofu',d:'Tofu fried until the crust shatters on contact — tossed in a dark soy glaze with a thread of sweetness and sesame that makes it disappear faster than anything else on the table.',p:[{a:650}],t:['veg']},
+  /* ── NOODLES ── */
+  {s:'noodles',sub:'hot',ko:'소고기 잡채',rom:'Sogogi Japchae',en:'Beef Japchae',d:'Silky glass noodles with marinated beef, shiitake mushrooms, and crisp vegetables — finished with a deep soy-garlic sweetness that pulls everything together.',p:[{a:1800}],t:['sig']},
+  {s:'noodles',sub:'hot',ko:'닭고기 잡채',rom:'Dakgogi Japchae',en:'Chicken Japchae',d:'Glass noodles wok-tossed with chicken, earthy mushrooms, and seasonal vegetables in a savory-sweet soy glaze — silky, light, and deeply comforting.',p:[{a:1550}],t:[]},
+  {s:'noodles',sub:'hot',ko:'짬뽕',rom:'Jjamppong',en:'Spicy Seafood Noodle Soup',d:'Fiery broth with crab, prawn, and octopus — simmered deep with vegetables and a smoky chili heat that builds. Noodles arrive already swimming in it.',p:[{a:1550}],t:['spicy','seafood']},
+  {s:'noodles',sub:'hot',ko:'해물볶음면',rom:'Haemul Bokkeum Myeon',en:'Spicy Seafood Noodles',d:'Wok-fired noodles with crab, prawn, and cuttlefish — tossed in a bold chili sauce at high heat until the edges catch.',p:[{a:1450}],t:['spicy','seafood']},
+  {s:'noodles',sub:'hot',ko:'소고기 라면',rom:'Beef Ramyun',en:'Beef Ramen',d:'Spicy peanut broth with chili garlic, soy, and spring onion — served over slow-cooked brisket. Rich, creamy, and completely satisfying.',p:[{a:1290}],t:['spicy']},
+  {s:'noodles',sub:'hot',ko:'잔치국수',rom:'Janchi Guksu',en:'Warm Noodle Soup',d:'A classic Korean celebratory noodle — soft wheat noodles in a clear, gently savory broth. Simple, honest, and warming.',p:[{a:950}],t:[]},
+  {s:'noodles',sub:'cold',ko:'비빔냉면',rom:'Bibim Naengmyeon',en:'Spicy Cold Buckwheat Noodles',d:'Chilled buckwheat noodles tossed in a fiery-sweet gochugaru sauce — topped with beef, pear, cucumber, a soft egg, and a final flourish of sesame. Cold, bold, and deeply Korean.',p:[{a:1250}],t:['spicy']},
+  {s:'noodles',sub:'cold',ko:'메밀국수',rom:'Memil Guksu',en:'Cold Buckwheat Noodles',d:'Chilled soba-style noodles with a clean soy dressing, toasted sesame, and a whisper of seaweed — restrained and elegant.',p:[{a:780}],t:['veg']},
+  {s:'noodles',sub:'cold',ko:'말차 콩국수',rom:'Matcha Kongguksu',en:'Matcha Soymilk Noodles',d:'Cold soba noodles submerged in creamy matcha-soy milk, a spoon of peanut butter stirred through, topped with lightly torched tofu. Unusual, precise, and quietly addictive.',p:[{a:780}],t:['veg']},
+  /* ── RICE & BIBIMBAP ── */
+  {s:'rice',ko:'해물비빔밥',rom:'Haemul Bibimbap',en:'Seafood Bibimbap',d:'Prawn, cuttlefish and octopus over bibimbap rice in a hot bowl — stir before eating, letting the gochujang paste coat everything as the rice crisps below.',p:[{a:1280}],t:['seafood']},
+    {s:'rice',ko:'해물볶음밥',rom:'Haemul Bokkeum Bap',en:'Seafood Fried Rice',d:'Prawn, cuttlefish and octopus wok-fired with day-old rice over maximum heat — the grains separate, the seafood chars at the edges, the sesame oil goes in last.',p:[{a:990}],t:['seafood']},
+  {s:'rice',ko:'돌솥비빔밥',rom:'Dolsot Bibimbap',en:'Stone Pot Bibimbap (Chicken / Beef)',d:'Rice pressed against a scorching stone pot until a crust forms at the base — topped with chicken or beef and seasonal vegetables. Stir everything in, then listen for the crackle.',p:[{a:950}],t:[]},
+  {s:'rice',ko:'소고기볶음밥',rom:'So-gogi Bokkeum Bap',en:'Beef Fried Rice',d:'Marinated beef and rice wok-fired together until the rice picks up every bit of the soy-sesame flavour from the meat. Rich and complete.',p:[{a:950}],t:[]},
+  {s:'rice',ko:'닭볶음밥',rom:'Dak Bokkeum Bap',en:'Chicken Fried Rice',d:'Seasoned chicken and fragrant rice wok-tossed over high heat — smoky edges, clean flavour, finished with spring onion and sesame.',p:[{a:750}],t:[]},
+  {s:'rice',ko:'김치볶음밥',rom:'Kimchi Bokkeum Bap',en:'Kimchi Fried Rice',d:'Tangy kimchi and tender chicken wok-tossed with rice and egg, finished with a touch of gochujang heat.',p:[{a:850}],t:['spicy']},
+  {s:'rice',ko:'마늘볶음밥',rom:'Manul Bokkeum Bap',en:'Garlic Fried Rice',d:'Each grain of rice fried separately with caramelised garlic until the kitchen fills with the smell. Simple, precise, and deeply satisfying.',p:[{a:650}],t:['veg']},
+  /* ── SOTBAP (Claypot Rice) ── */
+  {s:'sotbap',ko:'와규솥밥',rom:'Wagyu Sotbap',en:'Wagyu Claypot Rice',d:'A5-grade wagyu short rib rested over seasoned rice and shiitake mushrooms, sealed in a claypot until the fat renders completely into the grain. Opened tableside. Rich, unhurried, precise.',p:[{a:2650}],t:['sig','premium']},
+  {s:'sotbap',ko:'장어솥밥',rom:'Jangeo Sotbap',en:'Eel Claypot Rice',d:'Glazed eel placed over uncooked rice and sealed in a claypot — as the rice cooks, the eel\'s lacquered sweetness seeps through. Lifted with a drizzle of house tare.',p:[{a:2250}],t:['seafood','premium']},
+  {s:'sotbap',ko:'트러플소고기솥밥',rom:'Teureopeul So-gogi Sotbap',en:'Truffle Beef Claypot Rice',d:'Beef folded with truffle oil rested over rice in a sealed claypot — as the steam builds, the truffle scent rises first. Lift the lid at the table and let it arrive properly.',p:[{a:1850}],t:['premium']},
+  {s:'sotbap',ko:'소고기솥밥',rom:'So-gogi Sotbap',en:'Beef Claypot Rice',d:'Marinated beef resting on rice inside a sealed claypot — the steam does the work, and the flavour from the beef soaks down through every grain.',p:[{a:1350}],t:[]},
+  {s:'sotbap',ko:'닭구이솥밥',rom:'Dak Gui Sotbap',en:'Chicken Claypot Rice',d:'Chicken and shiitake mushrooms cooked with rice in a sealed claypot until the base forms a golden crust. Cracked open at the table.',p:[{a:1050}],t:[]},
+  /* ── BEVERAGES ── */
+  {s:'beverages',ko:'시나몬 블루',rom:'Cinnamon Blue',en:'Cinnamon Blue',d:'Blue pea tea infused with cinnamon and ginger, lifted with fresh lemon — gently spiced, citrus-bright, and cooling.',p:[{a:520}],t:['veg']},
+  {s:'beverages',ko:'로제 아이스',rom:'Rosé Ice',en:'Rosé Ice',d:'Hibiscus tea in full bloom, cooled with soda, a touch of ginger heat, and fresh lemon.',p:[{a:480}],t:['veg']},
+  {s:'beverages',ko:'생과일주스',rom:'Fresh Juice',en:'Fresh Juice',d:'Freshly pressed to order — orange, watermelon, or pineapple.',p:[{a:520}],t:['veg']},
+  {s:'beverages',ko:'파인애플 아이스티',rom:'Pineapple Iced Tea',en:'Pineapple Iced Tea',d:'Chilled tea blended with ripe pineapple and a squeeze of lemon — clean tropical sweetness with a bright finish.',p:[{a:450}],t:['veg']},
+  {s:'beverages',ko:'허니그라스 민트',rom:'Honeygrass Mint',en:'Honeygrass Mint',d:'Sparkling lemongrass soda softened with honey and fresh mint — light, aromatic, effortlessly refreshing.',p:[{a:470}],t:['veg']},
+  {s:'beverages',ko:'라임 수박',rom:'Lime Watermelon',en:'Lime Watermelon',d:'Cold watermelon juice sharpened with fresh lime — bright, clean, and lightly sweet.',p:[{a:420}],t:['veg']},
+  {s:'beverages',ko:'소프트 드링크',rom:'Soft Drinks',en:'Soft Drinks',d:'A selection of imported soft drinks.',p:[{a:300}],t:[]},
+  /* ── DESSERT ── */
+  {s:'dessert',en:'Dark Harmony',d:'A fudgy chocolate cake base beneath a layer of rich, dark ganache — deep, unhurried, and entirely its own thing. The only way to end a meal like this.',p:[{a:550}],t:['veg','sig']},
+];
+const BBQ={
+  premium:[
+    {ko:'와규 A5 립아이',en:'Wagyu A5 Ribeye',a:8800,hi:true},
+    {ko:'앵거스 양념갈비',en:'Angus Short Rib (Marinated)',a:7500},
+    {ko:'앵거스 LA갈비',en:'Angus LA Galbi — Marinated Short Ribs',a:6400},
+    {ko:'앵거스 립아이',en:'Angus Beef Rib Eye',a:5800},
+    {ko:'무뼈 프라임 우육',en:'Boneless Prime Beef (Marinated)',a:4800},
+    {ko:'와규 차돌박이',en:'Beef Brisket (Wagyu)',a:4400},
+    {ko:'양갈비',en:'Prime Lamb Chop',a:4400},
+  ],
+  regular:[
+    {ko:'양념안심',en:'Tenderloin (Marinated)',a:3450},
+    {ko:'립아이',en:'Rib Eye',a:3350},
+    {ko:'안심',en:'Tenderloin',a:3150},
+    {ko:'양념갈비',en:'Short Rib (Marinated)',a:2950},
+    {ko:'LA갈비',en:'LA Galbi — Marinated Short Ribs',a:2850},
+  ],
+  duck:[
+    {ko:'훈제오리 프리미엄',en:'Smoked Duck — Premium',a:3350},
+    {ko:'훈제오리',en:'Smoked Duck — Regular',a:2600},
+  ],
+  assortments:[
+    {name:'Assortment I',items:['Regular Ribeye','Regular Short Ribs','Regular LA Galbi','Beef Brisket (Wagyu)'],a:13100},
+    {name:'Assortment II',items:['Boneless Prime Beef (Marinated)','Regular LA Galbi','Regular Tenderloin','Beef Brisket (Wagyu)'],a:15200},
+    {name:'Assortment III',items:['Premium A5 Wagyu Ribeye','Prime Lamb Chop','Regular Tenderloin','Beef Brisket (Wagyu)'],a:21600,hi:true},
+  ],
+};
+const SIG=[
+  {t:'Seven Course',d:"Seven courses that move from bright to deep — a complete journey through SOL's kitchen. No pre-order required.",items:[{ko:'게 새우 샐러드',en:'Crab Prawn Salad'},{ko:'꿀새우볼',en:'Honey Shrimp Ball'},{ko:'소꼬리탕',en:'Oxtail Soup'},{ko:'매운소불고기',en:'Spicy Beef Bulgogi'},{ko:'안동찜닭',en:'Braised Chicken with Glass Noodles'},{ko:'버섯강정',en:'Sweet Crispy Mushrooms'},{ko:'비빔냉면',en:'Spicy Cold Buckwheat Noodles'}],p:9700},
+  {t:'Nine Course',d:'The complete SOL experience — nine courses built from bright starters through the depth of the grill. Includes premium tableside BBQ cuts. For those who want to stay a while.',items:[{ko:'호두 샐러드',en:'Walnut Salad'},{ko:'모자이크 김밥',en:'Mosaic Kimbap'},{ko:'마라튀김만두',en:'Prawn Fried Dumplings'},{ko:'소꼬리탕',en:'Oxtail Soup'},{ko:'앵거스 브리스켓',en:'Premium Wagyu Brisket — table BBQ'},{ko:'훈제오리',en:'Smoked Duck — table BBQ'},{ko:'닭개장',en:'Spicy Chicken Soup'},{ko:'매운소불고기',en:'Spicy Beef Bulgogi'},{ko:'말차 콩국수',en:'Matcha Soymilk Cold Noodles'}],p:15800},
+];
+
+/* ═══ TAG + PRICE HELPERS ═══ */
+function mkTag(t){
+  const m={spicy:'spicy',veg:'veg',sig:'sig',premium:'premium',seafood:'seafood'};
+  return(t||[]).filter(x=>m[x]).map(x=>`<span class="mc-tag ${m[x]}">${x==='veg'?'vegetarian':x==='sig'?'signature':x}</span>`).join('');
+}
+function mkPrice(p){
+  if(p.length===1)return`<span class="mc-price">${fmt(p[0].a)}</span>`;
+  return`<div class="mc-pm">${p.map(x=>`<div><span class="mc-pl">${x.l}</span><span>${fmt(x.a)}</span></div>`).join('')}</div>`;
+}
+function mkCard(it){
+  return`<div class="mcard" data-en="${encodeURIComponent(it.en||'')}" data-ko="${encodeURIComponent(it.ko||'')}" data-rom="${encodeURIComponent(it.rom||'')}" data-d="${encodeURIComponent(it.d||'')}" data-p="${encodeURIComponent(JSON.stringify(it.p||[]))}" data-t="${encodeURIComponent(JSON.stringify(it.t||[]))}" onclick="openDishEl(this)" style="cursor:pointer"><div class="mc-l">${it.ko?`<div class="mc-ko">${it.ko}${it.rom?`<span class="mc-rom"> · ${it.rom}</span>`:''}</div>`:''}<div class="mc-name">${it.en}</div><div class="mc-desc">${it.d}</div>${mkTag(it.t)?`<div class="mc-tags">${mkTag(it.t)}</div>`:''}</div><div class="mc-r">${mkPrice(it.p)}</div></div>`;
+}
+
+/* ═══ BUILD SECTION HTML ═══ */
+function buildSectionBody(sid){
+  if(sid==='signature'){
+    return`<div class="sig-grid">${SIG.map(c=>`<div class="sig-card"><div class="sig-n">${c.t}</div><div class="sig-t">${c.t}</div><div class="sig-d">${c.d}</div><ul class="sig-items">${c.items.map(x=>`<li><strong>${x.ko}</strong>${x.en}</li>`).join('')}</ul><div class="sig-price">${fmt(c.p)}<span class="sig-pn">per person · inclusive of service</span><span class="sig-note">For 2 · No pre-order required</span></div></div>`).join('')}</div>`;
+  }
+  if(sid==='bbq'){
+    const mkR=arr=>arr.map(r=>`<div class="bbq-row${r.hi?' hi':''}"><div><div class="bbq-ko">${r.ko}</div><div class="bbq-en">${r.en}</div></div><div class="bbq-amt">${fmt(r.a)}</div></div>`).join('');
+    return`<div class="bbq-tier"><div class="bbq-th">Premium Cuts</div>${mkR(BBQ.premium)}</div><div class="bbq-tier"><div class="bbq-th">Regular Cuts</div>${mkR(BBQ.regular)}</div><div class="bbq-tier"><div class="bbq-th">Duck</div>${mkR(BBQ.duck)}</div><div class="bbq-tier"><div class="bbq-th">Assortments</div><div class="assort-g">${BBQ.assortments.map(a=>`<div class="ac${a.hi?' hi':''}"><div class="ac-name">${a.name}</div><div class="ac-items">${a.items.join('<br>')}</div><span class="ac-price">${fmt(a.a)}</span></div>`).join('')}</div></div>`;
+  }
+  if(sid==='noodles'){
+    const cold=ITEMS.filter(x=>x.s==='noodles'&&x.sub==='cold');
+    const hot=ITEMS.filter(x=>x.s==='noodles'&&x.sub==='hot');
+    return`<div class="msec-sub">Cold Noodles</div>${cold.map(mkCard).join('')}<div class="msec-sub" style="margin-top:18px">Hot Noodles</div>${hot.map(mkCard).join('')}`;
+  }
+  if(sid==='beverages'){
+    return`<div class="bev-g">${ITEMS.filter(x=>x.s==='beverages').map(it=>`<div class="bev-c"><div class="bev-name">${it.en}</div><div class="bev-desc">${it.d}</div><div class="bev-price">${fmt(it.p[0].a)}</div></div>`).join('')}</div>`;
+  }
+  if(sid==='dessert'){
+    return ITEMS.filter(x=>x.s==='dessert').map(it=>`<div class="des-card"><div class="mc-name" style="font-size:19px;margin-bottom:7px">${it.en}</div><div class="mc-desc" style="margin-bottom:11px">${it.d}</div><span class="mc-price">${fmt(it.p[0].a)}</span></div>`).join('');
+  }
+  var secItems = ITEMS.filter(x=>x.s===sid);
+  var countHtml = secItems.length ? `<div class="msec-count-badge">${secItems.length} dish${secItems.length!==1?'es':''}</div>` : '';
+  return countHtml + secItems.map(mkCard).join('');
+}
+
+/* ═══ FLAT SECTION LIST ═══ */
+const ALL_SECS = GROUPS.flatMap(g=>g.sections.map(s=>({...s,gid:g.id})));
+let curGroupIdx=0, curSecIdx=0;
+
+function buildMenu(){
+  const tabsEl=document.getElementById('mo-tabs');
+  const snavEl=document.getElementById('mo-snav');
+  const panelsEl=document.getElementById('mo-panels');
+  tabsEl.innerHTML=''; snavEl.innerHTML=''; panelsEl.innerHTML='';
+
+  // Tabs
+  GROUPS.forEach((g,gi)=>{
+    const btn=document.createElement('button');
+    btn.className='mo-tab'+(gi===0?' act':'');
+    btn.dataset.gi=gi;
+    btn.textContent=g.label;
+    btn.addEventListener('click',()=>switchGroup(gi));
+    tabsEl.appendChild(btn);
+  });
+
+  // Panels (one per group)
+  GROUPS.forEach((g,gi)=>{
+    const panel=document.createElement('div');
+    panel.className='mo-panel'+(gi===0?' act':'');
+    panel.id='grp-'+g.id;
+
+    g.sections.forEach(s=>{
+      const sec=document.createElement('div');
+      sec.className='msec';
+      sec.id='msec-'+s.id;
+      const ghost=s.ko?s.ko[0]:'';
+      sec.innerHTML=`<div class="msec-hd"><div class="msec-hd-row"><div class="msec-left"><div class="msec-eye">${s.num}</div><h2 class="msec-title">${s.label}</h2>${s.ko?`<div class="msec-ko" lang="ko">${s.ko}${s.sub?` · ${s.sub}`:''}</div>`:''}</div><div class="msec-ghost" aria-hidden="true">${ghost}</div></div><div class="msec-underline"></div></div><div class="msec-body">${buildSectionBody(s.id)}</div>`;
+      panel.appendChild(sec);
+    });
+    panelsEl.appendChild(panel);
+  });
+
+  updateSideNav();
+  updatePrevNext();
+
+  // Add transition to items AFTER initial paint to avoid conflict
+  requestAnimationFrame(()=>{
+    requestAnimationFrame(()=>{
+      document.querySelectorAll('.mcard,.sig-card,.bbq-row,.bev-c,.ac,.des-card').forEach(el=>{
+        el.style.transition='opacity .45s var(--ease),transform .45s var(--ease),background .2s,border-color .3s';
+      });
+    });
+  });
+}
+
+function switchGroup(gi){
+  if(gi===curGroupIdx)return;
+  if(navigator.vibrate) navigator.vibrate(8);
+  // hide old panel
+  const oldPanel=document.getElementById('grp-'+GROUPS[curGroupIdx].id);
+  const newPanel=document.getElementById('grp-'+GROUPS[gi].id);
+  if(oldPanel)oldPanel.classList.remove('act');
+  if(newPanel){newPanel.classList.add('act');newPanel.scrollTop=0;}
+  document.querySelectorAll('.mo-tab').forEach((b,i)=>b.classList.toggle('act',i===gi));
+  var activeTab=document.querySelector('.mo-tab.act');
+  if(activeTab) activeTab.scrollIntoView({inline:'center',block:'nearest',behavior:'smooth'});
+  curGroupIdx=gi;
+  curSecIdx=0;
+  updateSideNav();
+  updatePrevNext();
+  revealItems(newPanel);
+}
+
+function updateSideNav(){
+  const snavEl=document.getElementById('mo-snav');
+  snavEl.innerHTML='';
+  const g=GROUPS[curGroupIdx];
+  g.sections.forEach((s,si)=>{
+    const btn=document.createElement('button');
+    btn.className='sn-item'+(si===curSecIdx?' act':'');
+    btn.innerHTML=`<span class="sn-num">${s.num}</span><span class="sn-label">${s.label}${s.sub?`<span class="sn-sub">${s.sub}</span>`:''}</span>`;
+    btn.addEventListener('click',()=>jumpToSection(si));
+    // magnetic
+    btn.addEventListener('mousemove',e=>{
+      const r=btn.getBoundingClientRect();
+      btn.style.transform=`translate(${((e.clientX-r.left-r.width/2)/r.width)*4}px,${((e.clientY-r.top-r.height/2)/r.height)*3}px)`;
+    });
+    btn.addEventListener('mouseleave',()=>{btn.style.transform='';});
+    snavEl.appendChild(btn);
+  });
+}
+
+function jumpToSection(si){
+  const g=GROUPS[curGroupIdx];
+  const s=g.sections[si];
+  const el=document.getElementById('msec-'+s.id);
+  const panel=document.getElementById('grp-'+g.id);
+  if(el&&panel){
+    panel.scrollTo({top:el.offsetTop-20,behavior:'smooth'});
+  }
+  curSecIdx=si;
+  updateSideNav();
+  updatePrevNext();
+}
+
+function updatePrevNext(){
+  const flat=ALL_SECS;
+  const g=GROUPS[curGroupIdx];
+  const curSid=g.sections[curSecIdx] && g.sections[curSecIdx].id;
+  const flatIdx=flat.findIndex(x=>x.id===curSid);
+  const prev=flat[flatIdx-1];
+  const next=flat[flatIdx+1];
+  document.getElementById('prev-label').textContent=prev?prev.label:'';
+  document.getElementById('next-label').textContent=next?next.label:'';
+  document.getElementById('sec-prev').style.opacity=prev?'1':'0.2';
+  document.getElementById('sec-next').style.opacity=next?'1':'0.2';
+  document.getElementById('sec-counter').textContent=`${flatIdx+1} · ${flat.length}`;
+}
+
+document.getElementById('sec-prev').addEventListener('click',()=>{
+  const g=GROUPS[curGroupIdx];
+  const curSid=g.sections[curSecIdx] && g.sections[curSecIdx].id;
+  const flatIdx=ALL_SECS.findIndex(x=>x.id===curSid);
+  /* Circular wrap */
+  const prev=ALL_SECS[(flatIdx-1+ALL_SECS.length)%ALL_SECS.length];
+  const prevGi=GROUPS.findIndex(gr=>gr.sections.some(s=>s.id===prev.id));
+  const prevSi=GROUPS[prevGi].sections.findIndex(s=>s.id===prev.id);
+  if(prevGi!==curGroupIdx)switchGroup(prevGi);
+  setTimeout(()=>jumpToSection(prevSi),prevGi!==curGroupIdx?80:0);
+});
+document.getElementById('sec-next').addEventListener('click',()=>{
+  const g=GROUPS[curGroupIdx];
+  const curSid=g.sections[curSecIdx] && g.sections[curSecIdx].id;
+  const flatIdx=ALL_SECS.findIndex(x=>x.id===curSid);
+  /* Circular wrap */
+  const next=ALL_SECS[(flatIdx+1)%ALL_SECS.length];
+  const nextGi=GROUPS.findIndex(gr=>gr.sections.some(s=>s.id===next.id));
+  const nextSi=GROUPS[nextGi].sections.findIndex(s=>s.id===next.id);
+  if(nextGi!==curGroupIdx)switchGroup(nextGi);
+  setTimeout(()=>jumpToSection(nextSi),nextGi!==curGroupIdx?80:0);
+});
+
+function revealItems(panel){
+  if(!panel)return;
+  const els=panel.querySelectorAll('.mcard,.sig-card,.bbq-row,.bev-c,.ac,.des-card');
+  els.forEach(el=>{el.classList.remove('vis');el.style.transitionDelay='0ms';});
+  requestAnimationFrame(()=>{
+    els.forEach((el,i)=>{el.style.transitionDelay=`${Math.min(i*14,360)}ms`;el.classList.add('vis');});
+  });
+}
+
+// Also update section spy on scroll within panel
+function setupScrollSpy(){
+  GROUPS.forEach(g=>{
+    const panel=document.getElementById('grp-'+g.id);
+    if(!panel)return;
+    panel.addEventListener('scroll',()=>{
+      if(curGroupIdx!==GROUPS.indexOf(g))return;
+      let si=0;
+      g.sections.forEach((s,i)=>{
+        const el=document.getElementById('msec-'+s.id);
+        if(el&&el.offsetTop-panel.scrollTop<120)si=i;
+      });
+      if(si!==curSecIdx){curSecIdx=si;updateSideNav();updatePrevNext();}
+    },{passive:true});
+  });
+}
+
+/* ═══ CURSOR ═══ */
+const cur=document.getElementById('cur');
+/* ── Cursor trail: second circle that lags behind ── */
+const trail=document.createElement('div');
+trail.style.cssText='position:fixed;width:28px;height:28px;border:1px solid rgba(184,149,88,.18);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:none;opacity:0;mix-blend-mode:difference';
+document.body.appendChild(trail);
+let tx=0,ty=0,trx=0,try_=0;
+(function lerpTrail(){
+  trx+=(tx-trx)*0.08; try_+=(ty-try_)*0.08;
+  trail.style.left=trx+'px'; trail.style.top=try_+'px';
+  requestAnimationFrame(lerpTrail);
+})();
+let mx=0,my=0,cx=0,cy=0;
+document.addEventListener('mousemove',e=>{
+  cur.style.opacity='1'; trail.style.opacity='1';
+  tx=e.clientX; ty=e.clientY;mx=e.clientX;my=e.clientY;});
+document.addEventListener('mousedown',()=>cur.classList.add('sm'));
+document.addEventListener('mouseup',()=>cur.classList.remove('sm'));
+document.querySelectorAll('a,button').forEach(el=>{
+  el.addEventListener('mouseenter',()=>cur.classList.add('big'));
+  el.addEventListener('mouseleave',()=>cur.classList.remove('big'));
+});
+(function lc(){cx+=(mx-cx)*.13;cy+=(my-cy)*.13;cur.style.left=cx+'px';cur.style.top=cy+'px';requestAnimationFrame(lc);})();
+
+/* ═══ SCROLL PROGRESS ═══ */
+window.addEventListener('scroll',()=>{
+  document.getElementById('prog').style.width=(window.scrollY/(document.body.scrollHeight-innerHeight)*100)+'%';
+  document.querySelector('nav').classList.toggle('sc',window.scrollY>60);
+},{passive:true});
+
+/* ═══ PRELOADER ═══ */
+window.addEventListener('DOMContentLoaded',()=>{
+  buildMenu();
+  setupScrollSpy();
+  /* Tap feedback */
+  document.addEventListener('touchstart',function(e){var c=e.target.closest('.mcard');if(c)c.classList.add('tapping');},{passive:true});
+  document.addEventListener('touchend',function(e){var c=e.target.closest('.mcard');if(c)setTimeout(function(){c.classList.remove('tapping');},150);},{passive:true});
+  /* ── QR mode: open menu immediately if ?qr=1 ── */
+  const _qs=location.search||'';if(_qs.indexOf('qr=1')!==-1){
+    setTimeout(()=>{
+      const navEl=document.querySelector('nav');if(navEl)navEl.classList.add('vis');
+      const pre=document.getElementById('pre');
+      if(pre){pre.style.transition='opacity .3s';pre.style.opacity='0';setTimeout(()=>{pre.style.display='none';},350);}
+      openMenu();
+    }, 400);
+  }
+  const printBtn=document.getElementById('hero-print-btn');
+  if(printBtn) printBtn.addEventListener('click',()=>window.print());
+
+  /* ── Mobile swipe: navigate between menu SECTIONS ── */
+  /* ── Swipe anywhere in menu to change category ── */
+  var swipeEl = document.getElementById('mo');
+  if(swipeEl){
+    var _tsx=0, _tsy=0, _tst=0;
+    swipeEl.addEventListener('touchstart', function(e){
+      _tsx = e.touches[0].clientX;
+      _tsy = e.touches[0].clientY;
+      _tst = Date.now();
+    }, {passive:true});
+    swipeEl.addEventListener('touchend', function(e){
+      var dx = e.changedTouches[0].clientX - _tsx;
+      var dy = e.changedTouches[0].clientY - _tsy;
+      var dt = Date.now() - _tst;
+      /* Require: horizontal > 40px, horizontal > vertical, within 600ms */
+      if(Math.abs(dx) < 40) return;
+      if(Math.abs(dy) > Math.abs(dx)) return;
+      if(dt > 600) return;
+      var tabs = document.querySelectorAll('.mo-tab');
+      var cur = -1;
+      for(var i=0; i<tabs.length; i++){
+        if(tabs[i].classList.contains('act')){ cur=i; break; }
+      }
+      if(cur === -1) return;
+      /* Circular wrap */
+      var nxt = dx < 0 ? (cur+1)%tabs.length : (cur-1+tabs.length)%tabs.length;
+      tabs[nxt].click();
+    }, {passive:true});
+  }
+  setTimeout(()=>{
+    const pre=document.getElementById('pre');
+    pre.classList.add('out');
+    setTimeout(()=>{pre.style.display='none';},700);
+    document.querySelector('nav').classList.add('vis');
+  },3700);
+});
+
+/* ═══ MENU OPEN / CLOSE ═══ */
+function openMenu(){
+  const mo=document.getElementById('mo');
+  if(mo){ mo.classList.add('open'); document.body.style.overflow='hidden'; }
+}
+document.getElementById('open-menu').addEventListener('click',()=>{
+  document.getElementById('mo').classList.add('open');
+  document.body.style.overflow='hidden';
+  // reset to first group, reveal items
+  setTimeout(()=>{
+    switchGroup(0);
+    const firstPanel=document.getElementById('grp-'+GROUPS[0].id);
+    revealItems(firstPanel);
+  },450);
+});
+document.getElementById('close-menu').addEventListener('click',closeMenu);
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});
+function closeMenu(){document.getElementById('mo').classList.remove('open');document.body.style.overflow='';}
+
+/* ═══ INTERSECTION OBSERVERS ═══ */
+const ro=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');ro.unobserve(e.target);}});},{threshold:.1});
+document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
+document.querySelectorAll('.wr').forEach(el=>{
+  el.innerHTML=el.textContent.trim().split(' ').map((w,i)=>`<span style="transition-delay:${i*22}ms">${w}&nbsp;</span>`).join('');
+});
+
+/* particles removed — ember canvas carries the ambient mood */
+
+/* ══════════════════════════════════════════════════
+   HERO — Silk Fireballs
+   ─────────────────────────────────────────────────
+   Tiny amber-gold orbs fall from the top of the frame.
+   Each one is a soft radial glow — no hard edges,
+   no shape, just light. They fall at different speeds,
+   sizes and opacities. As they descend they leave a
+   silk motion-blur trail, then dissolve before they
+   hit the bottom. Like embers drifting off a brazier.
+
+   Technique: persistent canvas (no clearRect) with a
+   very thin semi-transparent black fill each frame —
+   this creates the silk trail naturally, each orb's
+   previous position fading slower than it moves.
+
+   Count:   20 orbs (11 mobile)
+   Size:    4 – 10 px radius
+   Speed:   0.4 – 1.1 px/frame
+   Opacity: 0.15 – 0.55 at peak
+   Trail:   controlled by fill alpha (0.045 per frame)
+══════════════════════════════════════════════════ */
+(()=>{
+  const cv  = document.getElementById('hero-canvas');
+  const ctx = cv.getContext('2d');
+  let W, H;
+
+  function resize(){
+    W = cv.width  = cv.offsetWidth;
+    H = cv.height = cv.offsetHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize, { passive: true });
+
+  /* ── Orb factory ── */
+  function mkOrb(){
+    const r     = 6.0 + Math.random() * 10.0;  // radius 6–16px
+    const speed = 0.28 + Math.random() * 0.60; // px/frame (slightly slower = more visible)
+    const alpha = 0.18 + Math.random() * 0.34; // peak opacity
+    const drift = (Math.random() - 0.5) * 0.22; // horizontal drift px/frame
+    const wobble = {                            // sinusoidal x sway
+      amp:   8 + Math.random() * 16,           // ±8–24px
+      freq:  0.008 + Math.random() * 0.012,    // cycle length
+      phase: Math.random() * Math.PI * 2,
+    };
+    return {
+      x:      W * (0.06 + Math.random() * 0.88), // spawn across 88% width
+      y:      -r - Math.random() * H * 0.6,      // stagger start heights
+      r, speed, alpha, drift, wobble,
+      age: 0,
+    };
+  }
+
+  const COUNT  = window.innerWidth < 768 ? 21 : 39;
+  const orbs   = Array.from({ length: COUNT }, mkOrb);
+
+  /* ── Palette: three tones, assigned randomly ── */
+  const TONES = [
+    [210, 165,  70],   // warm gold
+    [200, 155,  55],   // soft amber
+    [225, 185,  85],   // bright gold
+  ];
+
+  function drawOrb(o, t){
+    const [rC, gC, bC] = TONES[Math.floor(o.r * 7) % TONES.length];
+
+    /* Sinusoidal x sway */
+    const sx = o.x + o.wobble.amp * Math.sin(t * o.wobble.freq + o.wobble.phase);
+
+    /* Fade envelope: full alpha in middle 60% of journey, fades at top/bottom */
+    const progress = (o.y + o.r) / (H + o.r);   // 0 (top) → 1 (bottom)
+    const env = progress < 0.12
+      ? progress / 0.12                          // fade in as it enters
+      : progress > 0.78
+        ? 1 - (progress - 0.78) / 0.22          // fade out before exit
+        : 1;
+    const a = o.alpha * Math.max(0, env);
+
+    if(a < 0.005) return;
+
+    /* ── Core glow: tight bright centre ── */
+    const coreR = o.r * 0.65;
+    const core  = ctx.createRadialGradient(sx, o.y, 0, sx, o.y, coreR);
+    core.addColorStop(0,   `rgba(235, 210, 140, ${Math.min(a * 1.1, 0.75)})`);
+    core.addColorStop(0.5, `rgba(${rC}, ${gC}, ${bC}, ${a * 0.85})`);
+    core.addColorStop(1,   `rgba(${rC}, ${gC}, ${bC}, 0)`);
+    ctx.fillStyle = core;
+    ctx.beginPath();
+    ctx.arc(sx, o.y, coreR, 0, Math.PI * 2);
+    ctx.fill();
+
+
+  }
+
+  let t = 0;
+  function draw(){
+    t++;
+
+    /* ── Clean frame each render — no trails ── */
+    ctx.clearRect(0, 0, W, H);
+    ctx.fillStyle = '#05060b';
+    ctx.fillRect(0, 0, W, H);
+
+    /* ── Update + draw orbs ── */
+    orbs.forEach(o => {
+      o.y   += o.speed;
+      o.x   += o.drift;
+      o.age++;
+
+      /* Respawn once fully off-screen bottom */
+      if(o.y - o.r * 4 > H){
+        const fresh = mkOrb();
+        fresh.y = -fresh.r - Math.random() * 40; // respawn at top
+        Object.assign(o, fresh);
+      }
+
+      /* Nudge x back toward centre if drifting to edge */
+      const cx = W * 0.5;
+      const pull = (cx - o.x) * 0.0004;
+      o.x += pull;
+
+      drawOrb(o, t);
+    });
+
+    requestAnimationFrame(draw);
+  }
+
+  /* ── Cold start: fill background before first frame ── */
+  ctx.fillStyle = '#05060b';
+  ctx.fillRect(0, 0, W, H);
+
+  draw();
+})();
+
+/* ═══ PHILOSOPHY ORB — hollow glowing ring with 솔·SOL ═══
+   A hollow sphere: glowing brass ring outline only.
+   Inside: 솔 (Korean) above, SOL (English) below.
+   The ring glows, holds, fades, repeats — 5s cycle.
+   A slow rotating highlight sweeps around the ring arc.
+══════════════════════════════════════════════════ */
+(()=>{
+  function initOrb(){
+    const cv = document.getElementById('ph-orb');
+    if(!cv) return;
+    const ctx = cv.getContext('2d');
+    const SIZE = window.innerWidth < 640 ? 220 : 300;
+    cv.width  = SIZE * 2;
+    cv.height = SIZE * 2;
+    cv.style.width  = SIZE + 'px';
+    cv.style.height = SIZE + 'px';
+    ctx.scale(2, 2);
+
+    const CX = SIZE / 2, CY = SIZE / 2;
+    const R  = SIZE * 0.38;
+    let t = 0;
+
+    function draw(){
+      t += 0.012;
+      ctx.clearRect(0, 0, SIZE, SIZE);
+
+      /* ── Glow envelope: illuminate → hold → fade → dark ── */
+      const raw  = (Math.sin(t * 0.6 - Math.PI * 0.5) + 1) / 2;
+      const glow = Math.pow(raw, 0.55);
+
+      /* ── Outer corona: circular arc only, no rectangle ── */
+      if(glow > 0.05){
+        const corona = ctx.createRadialGradient(CX, CY, R * 0.85, CX, CY, R * 2.0);
+        corona.addColorStop(0,   `rgba(184,149,88,${(glow * 0.22).toFixed(3)})`);
+        corona.addColorStop(0.5, `rgba(140,100,40,${(glow * 0.06).toFixed(3)})`);
+        corona.addColorStop(1,   'rgba(0,0,0,0)');
+        ctx.beginPath();
+        ctx.arc(CX, CY, R * 2.0, 0, Math.PI * 2);
+        ctx.fillStyle = corona;
+        ctx.fill();
+      }
+
+      /* ── Ring: hollow circle, glowing stroke ── */
+      /* Thin inner glow layer */
+      ctx.beginPath();
+      ctx.arc(CX, CY, R, 0, Math.PI * 2);
+      ctx.strokeStyle = `rgba(184,149,88,${(glow * 0.18).toFixed(3)})`;
+      ctx.lineWidth = 8;
+      ctx.stroke();
+
+      /* Crisp main ring */
+      ctx.beginPath();
+      ctx.arc(CX, CY, R, 0, Math.PI * 2);
+      ctx.strokeStyle = `rgba(210,170,70,${(glow * 0.75 + 0.08).toFixed(3)})`;
+      ctx.lineWidth = 1.2;
+      ctx.stroke();
+
+      /* ── Rotating highlight arc ──
+         A bright segment sweeps around the ring.
+      */
+      const hA = t * 0.55;
+      ctx.beginPath();
+      ctx.arc(CX, CY, R, hA, hA + 0.9);
+      ctx.strokeStyle = `rgba(255,230,140,${(glow * 0.70).toFixed(3)})`;
+      ctx.lineWidth = 2.2;
+      ctx.stroke();
+
+      /* ── Text inside: 솔 (Korean) + SOL (English) ── */
+      const textAlpha = glow * 0.85 + 0.06;
+
+      /* Korean 솔 — upper */
+      ctx.font = `${SIZE * 0.26}px 'Noto Serif KR', serif`;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillStyle = `rgba(220,180,80,${textAlpha.toFixed(3)})`;
+      ctx.fillText('솔', CX, CY - SIZE * 0.06);
+
+      /* English SOL — lower, smaller, letter-spaced */
+      ctx.font = `100 ${SIZE * 0.09}px 'Fraunces', Georgia, serif`;
+      ctx.fillStyle = `rgba(184,149,88,${(textAlpha * 0.65).toFixed(3)})`;
+      /* Simulate letter-spacing by drawing each char */
+      const word = 'S  O  L';
+      ctx.fillText(word, CX, CY + SIZE * 0.20);
+
+      requestAnimationFrame(draw);
+    }
+    draw();
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', function(){ setTimeout(initOrb, 200); });
+  } else {
+    setTimeout(initOrb, 200);
+  }
+})();
+
+
+/* ── THRESHOLD: word reveal + glowing Korean characters ── */
+(()=>{
+  var section = document.getElementById('threshold');
+  if(!section) return;
+  var words = document.querySelectorAll('#thr-q .word');
+  var mats  = document.querySelectorAll('.thr-mat-3d');
+
+  /* ── Glow/dim animation on each canvas ── */
+  function initTablet(cv){
+    var ctx   = cv.getContext('2d');
+    var ko    = cv.dataset.ko;
+    var phase = parseFloat(cv.dataset.phase) || 0;
+    var SIZE  = window.innerWidth < 640 ? 60 : 72;
+    cv.width  = SIZE * 2;
+    cv.height = SIZE * 2;
+    cv.style.width  = SIZE + 'px';
+    cv.style.height = SIZE + 'px';
+    ctx.scale(2, 2);
+    var CX = SIZE/2, CY = SIZE/2;
+    var t  = phase;
+
+    function draw(){
+      t += 0.012;
+      ctx.clearRect(0, 0, SIZE, SIZE);
+
+      /* Breathe: illuminate → hold → fade → dark */
+      var raw  = (Math.sin(t * 0.55 - Math.PI*0.5) + 1) / 2;
+      var glow = Math.pow(raw, 0.6);  /* ease — linger at peak */
+
+      /* Outer corona */
+      if(glow > 0.06){
+        var corona = ctx.createRadialGradient(CX, CY, SIZE*0.12, CX, CY, SIZE*0.55);
+        corona.addColorStop(0,  'rgba(184,149,88,' + (glow*0.20).toFixed(3) + ')');
+        corona.addColorStop(0.5,'rgba(140,100,40,' + (glow*0.07).toFixed(3) + ')');
+        corona.addColorStop(1,  'rgba(0,0,0,0)');
+        ctx.fillStyle = corona;
+        ctx.beginPath();
+        ctx.arc(CX, CY, SIZE*0.55, 0, Math.PI*2);
+        ctx.fill();
+      }
+
+      /* Korean character */
+      var fontSize = Math.round(SIZE * 0.52);
+      ctx.font = '200 ' + fontSize + "px 'Noto Serif KR', serif";
+      ctx.textAlign    = 'center';
+      ctx.textBaseline = 'middle';
+
+      /* Glow shadow layers */
+      ctx.shadowColor = 'rgba(200,155,60,' + (glow*0.65).toFixed(3) + ')';
+      ctx.shadowBlur  = 18 * glow;
+      ctx.fillStyle   = 'rgba(220,178,80,' + (0.06 + glow*0.92).toFixed(3) + ')';
+      ctx.fillText(ko, CX, CY);
+      ctx.shadowBlur  = 0;
+
+      requestAnimationFrame(draw);
+    }
+    draw();
+  }
+
+  /* Scroll reveal */
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(!e.isIntersecting) return;
+      section.classList.add('in-view');
+      words.forEach(function(w,i){
+        setTimeout(function(){ w.classList.add('in'); }, 100 + i*70);
+      });
+      var delay = 100 + words.length*70 + 300;
+      document.querySelectorAll('.thr-cv').forEach(function(cv, i){
+        setTimeout(function(){
+          cv.closest('.thr-mat-3d').classList.add('in');
+          initTablet(cv);
+        }, delay + i*220);
+      });
+      obs.disconnect();
+    });
+  }, {threshold:0.25});
+  obs.observe(section);
+})();
+
+/* ── Section scroll → tab sync ── */
+(function(){
+  var panels = document.getElementById('mo-panels');
+  if(!panels) return;
+  /* Re-observe whenever panels content changes (group switch) */
+  function observeSections(){
+    var secs = panels.querySelectorAll('[id^="msec-"]');
+    if(!secs.length) return;
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(!e.isIntersecting) return;
+        var sid = e.target.id.replace('msec-','');
+        /* Find which group+section this belongs to */
+        var gi = -1, si = -1;
+        GROUPS.forEach(function(g,gii){
+          g.sections.forEach(function(s,sii){
+            if(s.id === sid){ gi=gii; si=sii; }
+          });
+        });
+        if(gi < 0) return;
+        /* Update tab highlight without triggering full switchGroup animation */
+        if(gi !== curGroupIdx){
+          document.querySelectorAll('.mo-tab').forEach(function(b,i){ b.classList.toggle('act',i===gi); });
+        var at=document.querySelector('.mo-tab.act');
+        if(at) at.scrollIntoView({inline:'center',block:'nearest',behavior:'smooth'});
+          curGroupIdx = gi;
+        }
+        curSecIdx = si;
+        updateSideNav();
+        updatePrevNext();
+      });
+    },{root: panels, threshold: 0.3});
+    secs.forEach(function(s){ io.observe(s); });
+    return io;
+  }
+  /* Watch for DOM changes in panels (group switches rebuild sections) */
+  var activeIO = null;
+  var mo2 = new MutationObserver(function(){
+    if(activeIO) activeIO.disconnect();
+    activeIO = observeSections();
+  });
+  mo2.observe(panels, {childList:true, subtree:true});
+  /* Initial observe */
+  setTimeout(function(){ activeIO = observeSections(); }, 600);
+})();
+
+
+
+/* ── Scroll progress in menu ── */
+(()=>{
+  var panels = document.querySelector('.mo-panels');
+  var prog   = document.getElementById('mo-prog');
+  if(!panels || !prog) return;
+  panels.addEventListener('scroll', function(){
+    var pct = panels.scrollTop / (panels.scrollHeight - panels.clientHeight);
+    prog.style.width = (Math.min(pct, 1) * 100) + '%';
+  }, {passive:true});
+})();
+
+
+
+/* ── DISH MODAL JS ── */
+/* Photo map: dish English name → base64 or URL */
+var DISH_PHOTOS = {};
+
+function openDishEl(el){
+  var it = {
+    en:  decodeURIComponent(el.dataset.en  ||''),
+    ko:  decodeURIComponent(el.dataset.ko  ||''),
+    rom: decodeURIComponent(el.dataset.rom ||''),
+    d:   decodeURIComponent(el.dataset.d   ||''),
+    p:   JSON.parse(decodeURIComponent(el.dataset.p||'[]')),
+    t:   JSON.parse(decodeURIComponent(el.dataset.t||'[]'))
+  };
+  openDish(it);
+}
+function openDish(it){
+  var modal = document.getElementById('dish-modal');
+  var fmt   = function(p){ return p && p[0] ? '৳'+p[0].a.toLocaleString() : ''; };
+
+  /* Fill content */
+  document.getElementById('dm-ko').textContent   = it.ko  || '';
+  document.getElementById('dm-rom').textContent  = it.rom || '';
+  document.getElementById('dm-name').textContent = it.en  || '';
+  document.getElementById('dm-desc').textContent = it.d   || '';
+  document.getElementById('dm-price').textContent= fmt(it.p);
+
+  /* Tags */
+  var tags = document.getElementById('dm-tags');
+  tags.innerHTML = '';
+  if(it.t && it.t.length){
+    it.t.forEach(function(tag){
+      var span = document.createElement('span');
+      span.className = 'mc-tag';
+      if(tag==='sig')     { span.textContent='Signature'; span.style.color='var(--brass)'; span.style.borderColor='rgba(184,149,88,.3)'; }
+      else if(tag==='veg'){ span.textContent='Vegetarian'; span.style.color='#7ab88c'; span.style.borderColor='rgba(122,184,140,.22)'; }
+      else if(tag==='spicy'){ span.textContent='🔥 Spicy'; span.style.color='var(--ember)'; span.style.borderColor='rgba(196,119,98,.22)'; }
+      else if(tag==='seafood'){ span.textContent='Seafood'; span.style.color='#7ab8c8'; span.style.borderColor='rgba(122,184,200,.22)'; }
+      else if(tag==='premium'){ span.textContent='Premium'; span.style.color='var(--blt)'; span.style.borderColor='rgba(209,176,119,.22)'; }
+      else { span.textContent = tag; }
+      tags.appendChild(span);
+    });
+  }
+
+  /* Photo — only show if photo exists */
+  var img      = document.getElementById('dm-img');
+  var photoDiv = document.getElementById('dm-photo');
+  var photo    = DISH_PHOTOS[it.en] || DISH_PHOTOS[it.ko] || '';
+  if(photo){
+    img.src = photo; img.alt = it.en;
+    photoDiv.style.display = 'block';
+  } else {
+    photoDiv.style.display = 'none';
+    img.src = '';
+  }
+
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeDish(){
+  var modal = document.getElementById('dish-modal');
+  modal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+  var close    = document.getElementById('dm-close');
+  var backdrop = document.getElementById('dm-backdrop');
+  if(close)    close.addEventListener('click', closeDish);
+  if(backdrop) backdrop.addEventListener('click', closeDish);
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape') closeDish();
+  });
+});
+
+
+
+/* ═══ FORM ═══ */
+function doSub(e){
+  e.preventDefault();
+  const fn  = (document.getElementById('r-fn')||{value:''}).value.trim();
+  const ln  = (document.getElementById('r-ln')||{value:''}).value.trim();
+  const dt  = (document.getElementById('r-dt')||{value:''}).value;
+  const tm  = (document.getElementById('r-tm')||{value:''}).value;
+  const si  = (document.getElementById('r-si')||{value:''}).value.trim();
+  const phone = '+8801332130070';
+  const dtFmt = dt ? new Date(dt).toLocaleDateString('en-GB',{day:'2-digit',month:'long',year:'numeric'}) : '—';
+  const tmFmt = tm ? (()=>{const [h,m]=tm.split(':');const hr=+h;return `${hr>12?hr-12:hr}:${m} ${hr>=12?'PM':'AM'}`;})() : '—';
+  const msg = `*New Reservation Request — SOL*
+
+*Name:* ${fn} ${ln}
+*Date:* ${dtFmt}
+*Time:* ${tmFmt}
+*Special Instructions:* ${si||'None'}
+
+_Sent via soldhaka.com_`;
+  window.open('https://wa.me/'+phone+'?text='+encodeURIComponent(msg),'_blank');
+}
+</script>
+
+<!-- DISH MODAL -->
+<div id="dish-modal" role="dialog" aria-modal="true" aria-label="Dish detail">
+  <div class="dm-backdrop" id="dm-backdrop"></div>
+  <div class="dm-card">
+    <button class="dm-close" id="dm-close" aria-label="Close">✕</button>
+    <div class="dm-photo" id="dm-photo" style="display:none">
+      <img id="dm-img" src="" alt="" style="display:block;width:100%;height:100%;object-fit:cover">
+    </div>
+    <div class="dm-ko"  id="dm-ko"></div>
+    <div class="dm-rom" id="dm-rom"></div>
+    <div class="dm-name" id="dm-name"></div>
+    <div class="dm-desc" id="dm-desc"></div>
+    <div class="dm-footer">
+      <div class="dm-price" id="dm-price"></div>
+      <div class="dm-tags"  id="dm-tags"></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
